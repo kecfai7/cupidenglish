@@ -233,7 +233,7 @@ export function ArrowTranslator({ apiKey, onResultChange, onOpenSettings }) {
               setSelectedPresetId(null);
             }}
             placeholder="예: 나는 가고있다 to집에 on 내차를타고 비가 내린다 above 내차위로"
-            className="w-full h-28 p-4 rounded-2xl bg-pink-50/80 dark:bg-slate-950 border border-pink-300 dark:border-slate-700 text-slate-950 dark:text-white placeholder-slate-400 font-bold text-base leading-relaxed resize-none transition-all focus:border-pink-600 focus:bg-white dark:focus:bg-slate-950 dark:focus:text-white shadow-inner"
+            className="w-full h-28 p-4 rounded-2xl bg-pink-50/80 dark:bg-slate-950 border border-pink-300 dark:border-slate-700 text-slate-950 dark:text-white placeholder-slate-400 font-extrabold text-base sm:text-lg leading-relaxed resize-none transition-all focus:border-pink-600 focus:bg-white dark:focus:bg-slate-950 shadow-inner"
           />
 
           <div className="absolute right-3 bottom-3 flex items-center gap-2">

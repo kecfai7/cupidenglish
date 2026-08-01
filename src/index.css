@@ -84,36 +84,13 @@ input, textarea {
   font-weight: 700;
 }
 
-[data-theme="light"] input,
-[data-theme="light"] textarea {
-  color: #0f172a;
+input::placeholder, textarea::placeholder {
+  color: #94a3b8;
+  opacity: 1;
 }
 
-[data-theme="light"] input:focus,
-[data-theme="light"] textarea:focus {
-  color: #0f172a;
-  background-color: #ffffff;
-  border-color: #ec4899;
-}
-
-[data-theme="dark"] input,
-[data-theme="dark"] textarea,
-.dark input,
-.dark textarea {
-  color: #ffffff !important;
-}
-
-[data-theme="dark"] input:focus,
-[data-theme="dark"] textarea:focus,
-.dark input:focus,
-.dark textarea:focus {
-  color: #ffffff !important;
-  background-color: #020617 !important;
-  border-color: #ec4899 !important;
-}
-
-[data-theme="light"] input::placeholder,
-[data-theme="light"] textarea::placeholder {
+.dark input::placeholder, .dark textarea::placeholder,
+[data-theme="dark"] input::placeholder, [data-theme="dark"] textarea::placeholder {
   color: #64748b;
 }
 
