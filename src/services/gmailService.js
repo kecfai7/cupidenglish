@@ -1,8 +1,8 @@
 // src/services/gmailService.js
 import { generateEmailHTML } from './emailService';
 
-const GMAIL_TOKEN_KEY = 'arrow_english_gmail_access_token';
-const GMAIL_CLIENT_ID_KEY = 'arrow_english_gmail_client_id';
+const GMAIL_TOKEN_KEY = 'cupid_english_gmail_access_token';
+const GMAIL_CLIENT_ID_KEY = 'cupid_english_gmail_client_id';
 
 /**
  * Get stored Gmail Access Token
@@ -72,7 +72,7 @@ export async function sendEmailViaGmailAPI(result, senderEmail, recipientEmails,
     throw new Error('Gmail 인증 토큰(Google Access Token)이 등록되지 않았습니다.');
   }
 
-  const subject = result.english || result.arrowKorean || 'Arrow English Report';
+  const subject = result.english || result.arrowKorean || 'Cupid English Report';
   const htmlBody = generateEmailHTML(result, senderEmail);
 
   // Encode subject to UTF-8 Base64 for RFC 2047 compatibility

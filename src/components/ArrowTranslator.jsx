@@ -152,51 +152,51 @@ export function ArrowTranslator({ apiKey, onResultChange, onOpenSettings }) {
   return (
     <div className="max-w-6xl mx-auto px-4 py-6 space-y-8 animate-fade-in">
       {/* Hero Header Banner */}
-      <section className="glass-panel p-8 text-center relative overflow-hidden">
+      <section className="bg-white dark:bg-slate-900 border border-pink-300 dark:border-slate-800 rounded-3xl p-8 text-center relative overflow-hidden shadow-xl space-y-4">
         <div className="absolute -right-12 -top-12 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -left-12 -bottom-12 w-64 h-64 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold mb-4">
-          <Compass className="w-4 h-4 text-indigo-400" />
-          <span>애로우 잉글리시 (Arrow English) 직관 원리 시각화 시스템</span>
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-100 dark:bg-pink-500/20 border border-pink-300 dark:border-pink-500/40 text-pink-900 dark:text-pink-200 text-xs font-bold mb-2">
+          <Compass className="w-4 h-4 text-pink-600 dark:text-pink-400" />
+          <span>💘 큐피드 잉글리시 (Cupid English) 직관 원리 시각화 시스템</span>
         </div>
 
-        <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight mb-3">
+        <h2 className="text-2xl sm:text-4xl font-black text-slate-950 dark:text-white tracking-tight mb-3">
           뇌 구조를 <span className="gradient-text">영문의 순서 그대로</span> 다듬으세요
         </h2>
-        <p className="text-slate-300 max-w-3xl mx-auto text-sm sm:text-base leading-relaxed mb-6">
-          거꾸로 되돌아가지 않고, <strong className="text-amber-300 font-semibold">주인공(주어) ➔ 동작 ➔ 가까운 대상 ➔ 전치사 ➔ 장소 ➔ 시간</strong> 순서로 뻗어나가는 직관적 영어 번역 및 초등 안심 비주얼 학습 시스템입니다.
+        <p className="text-slate-800 dark:text-slate-200 font-bold max-w-3xl mx-auto text-sm sm:text-base leading-relaxed mb-6">
+          거꾸로 되돌아가지 않고, <strong className="text-pink-700 dark:text-pink-300 font-black">주인공(주어) ➔ 동작 ➔ 가까운 대상 ➔ 전치사 ➔ 장소 ➔ 시간</strong> 순서로 뻗어나가는 직관적 큐피드 영어 번역 및 파스텔 비주얼 학습 시스템입니다.
         </p>
 
         {/* 🚀 6단계 영어식 어순 뻗어나가기 안내 띠 (6-Step Sequence Visual Bar) */}
-        <div className="p-4 rounded-2xl bg-slate-950/80 border border-indigo-500/30 max-w-4xl mx-auto text-xs">
-          <span className="text-[11px] font-extrabold text-amber-400 uppercase tracking-wider block mb-2">
-            🎯 원어민 뇌속 화살표 카메라 뻗어나가기 순서 (6단계)
+        <div className="p-4 rounded-2xl bg-pink-50 dark:bg-slate-950 border border-pink-300 dark:border-pink-500/30 max-w-4xl mx-auto text-xs shadow-inner">
+          <span className="text-xs font-black text-pink-900 dark:text-pink-300 uppercase tracking-wider block mb-2">
+            💘 원어민 뇌속 큐피드 카메라 뻗어나가기 순서 (6단계)
           </span>
           <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2">
-            <span className="px-2.5 py-1 rounded-lg bg-indigo-500/20 text-indigo-300 font-bold border border-indigo-500/40">1. 주인공(주어)</span>
-            <span className="text-slate-500 font-bold">➔</span>
-            <span className="px-2.5 py-1 rounded-lg bg-blue-500/20 text-blue-300 font-bold border border-blue-500/40">2. 동작</span>
-            <span className="text-slate-500 font-bold">➔</span>
-            <span className="px-2.5 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/40">3. 가까운 대상</span>
-            <span className="text-slate-500 font-bold">➔</span>
-            <span className="px-2.5 py-1 rounded-lg bg-amber-500/20 text-amber-300 font-bold border border-amber-500/40">4. 전치사</span>
-            <span className="text-slate-500 font-bold">➔</span>
-            <span className="px-2.5 py-1 rounded-lg bg-rose-500/20 text-rose-300 font-bold border border-rose-500/40">5. 장소</span>
-            <span className="text-slate-500 font-bold">➔</span>
-            <span className="px-2.5 py-1 rounded-lg bg-purple-500/20 text-purple-300 font-bold border border-purple-500/40">6. 시간</span>
+            <span className="px-3 py-1.5 rounded-xl bg-pink-600 text-white font-black border border-pink-700 shadow-sm">1. 주인공(주어)</span>
+            <span className="text-slate-600 dark:text-slate-400 font-extrabold">➔</span>
+            <span className="px-3 py-1.5 rounded-xl bg-purple-600 text-white font-black border border-purple-700 shadow-sm">2. 동작</span>
+            <span className="text-slate-600 dark:text-slate-400 font-extrabold">➔</span>
+            <span className="px-3 py-1.5 rounded-xl bg-rose-600 text-white font-black border border-rose-700 shadow-sm">3. 가까운 대상</span>
+            <span className="text-slate-600 dark:text-slate-400 font-extrabold">➔</span>
+            <span className="px-3 py-1.5 rounded-xl bg-amber-600 text-white font-black border border-amber-700 shadow-sm">4. 전치사</span>
+            <span className="text-slate-600 dark:text-slate-400 font-extrabold">➔</span>
+            <span className="px-3 py-1.5 rounded-xl bg-violet-600 text-white font-black border border-violet-700 shadow-sm">5. 장소</span>
+            <span className="text-slate-600 dark:text-slate-400 font-extrabold">➔</span>
+            <span className="px-3 py-1.5 rounded-xl bg-sky-600 text-white font-black border border-sky-700 shadow-sm">6. 시간</span>
           </div>
         </div>
       </section>
 
       {/* Preset Sentence Pills */}
-      <section className="glass-panel p-6 space-y-4">
+      <section className="bg-white dark:bg-slate-900 border border-pink-300 dark:border-slate-800 rounded-3xl p-6 space-y-4 shadow-xl">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2 text-sm font-bold text-slate-300">
-            <Layers className="w-4 h-4 text-sky-400" />
+          <div className="flex items-center gap-2 text-sm font-black text-slate-950 dark:text-slate-100">
+            <Layers className="w-4 h-4 text-sky-600 dark:text-sky-400" />
             <span>연습 예문 9가지 (1-클릭 테스트)</span>
           </div>
-          <span className="text-xs text-slate-400">클릭하면 즉시 어순 교정 & 이미지 학습이 표시됩니다</span>
+          <span className="text-xs font-bold text-slate-700 dark:text-slate-300">클릭하면 즉시 어순 교정 & 이미지 학습이 표시됩니다</span>
         </div>
 
         <div className="flex flex-wrap gap-2.5">
@@ -214,12 +214,13 @@ export function ArrowTranslator({ apiKey, onResultChange, onOpenSettings }) {
       </section>
 
       {/* Input Box & Converter Action */}
-      <section className="glass-panel p-6 space-y-4">
+      <section className="bg-white dark:bg-slate-900 border border-pink-300 dark:border-slate-800 rounded-3xl p-6 space-y-4 shadow-xl">
         <div className="flex items-center justify-between">
-          <label className="block text-sm font-bold text-slate-200">
+          <label className="text-sm font-black text-slate-950 dark:text-white flex items-center gap-2">
+            <Sparkles className="w-4 h-4 text-pink-600" />
             학습자 단어 배열 (한글/영단어/전치사) 입력
           </label>
-          <span className="text-xs text-sky-400 font-medium">
+          <span className="text-xs text-pink-700 dark:text-sky-300 font-extrabold">
             💡 초등생도 자유롭게 생각나는 단어를 순서대로 입력해보세요!
           </span>
         </div>
@@ -232,7 +233,7 @@ export function ArrowTranslator({ apiKey, onResultChange, onOpenSettings }) {
               setSelectedPresetId(null);
             }}
             placeholder="예: 나는 가고있다 to집에 on 내차를타고 비가 내린다 above 내차위로"
-            className="w-full h-28 p-4 rounded-xl bg-slate-900/80 border border-slate-700/80 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-base leading-relaxed resize-none transition-all"
+            className="w-full h-28 p-4 rounded-2xl bg-pink-50/50 dark:bg-slate-950 border border-pink-300 dark:border-slate-700 text-slate-950 dark:text-white placeholder-slate-500 font-bold text-base leading-relaxed resize-none transition-all focus:border-pink-600 focus:bg-white shadow-inner"
           />
 
           <div className="absolute right-3 bottom-3 flex items-center gap-2">
@@ -304,9 +305,9 @@ export function ArrowTranslator({ apiKey, onResultChange, onOpenSettings }) {
           )}
 
           {/* 🌟 1. Exact English Sentence & Arrow Flow Mapping */}
-          <section className="glass-panel p-8 relative overflow-hidden border-indigo-500/30 space-y-6">
+          <section className="bg-white dark:bg-slate-900 border border-pink-300 dark:border-slate-800 rounded-3xl p-8 relative overflow-hidden space-y-6 shadow-xl">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+              <span className="text-xs font-black uppercase tracking-wider text-emerald-800 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-400 dark:border-emerald-500/20">
                 Exact Natural Standard English
               </span>
 
@@ -357,15 +358,17 @@ export function ArrowTranslator({ apiKey, onResultChange, onOpenSettings }) {
               </div>
             )}
 
-            <h3 className="text-xl sm:text-3xl font-extrabold text-white font-brand leading-snug">
-              "{result.english}"
-            </h3>
+            <div className="p-4 rounded-2xl bg-pink-100/90 dark:bg-slate-950 border border-pink-300 dark:border-slate-800 shadow-sm">
+              <h3 className="text-xl sm:text-3xl font-black text-pink-950 dark:text-white font-brand leading-snug select-all">
+                "{result.english}"
+              </h3>
+            </div>
 
             {/* Visual Arrow Sequence Cards with Quick Word Edit Mode */}
-            <div className="pt-4 border-t border-slate-800 space-y-4">
+            <div className="pt-4 border-t border-pink-200 dark:border-slate-800 space-y-4">
               <div className="flex items-center justify-between flex-wrap gap-2">
-                <h4 className="text-xs font-bold text-slate-300 uppercase tracking-wider flex items-center gap-2">
-                  <ArrowRight className="w-4 h-4 text-indigo-400" />
+                <h4 className="text-xs font-black text-slate-950 dark:text-slate-100 uppercase tracking-wider flex items-center gap-2">
+                  <ArrowRight className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
                   <span>6단계 화살표 어순 매핑 (Arrow Flow Sequence)</span>
                 </h4>
 
@@ -394,16 +397,16 @@ export function ArrowTranslator({ apiKey, onResultChange, onOpenSettings }) {
 
                   return (
                     <React.Fragment key={index}>
-                      <div className="flex flex-col gap-1.5 p-3 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-indigo-500/50 shadow-sm min-w-[140px] transition-all">
-                        <span className="text-[11px] font-medium text-slate-400 flex items-center justify-between gap-1">
+                      <div className="flex flex-col gap-1.5 p-3.5 rounded-2xl bg-pink-50 dark:bg-slate-950 border border-pink-300 dark:border-slate-800 hover:border-pink-500 shadow-sm min-w-[140px] transition-all">
+                        <span className="text-[11px] font-bold text-slate-800 dark:text-slate-300 flex items-center justify-between gap-1">
                           <span className="flex items-center gap-1">
-                            <span className="w-1.5 h-1.5 rounded-full bg-indigo-400" />
+                            <span className="w-2 h-2 rounded-full bg-pink-600" />
                             {chunk.role}
                           </span>
                           {!isEditMode && (
                             <button
                               onClick={() => setIsEditMode(true)}
-                              className="text-slate-500 hover:text-amber-300 text-[10px]"
+                              className="text-slate-600 dark:text-slate-400 hover:text-pink-600 text-[10px]"
                               title="단어 수정"
                             >
                               <Edit2 className="w-3 h-3" />
@@ -411,7 +414,7 @@ export function ArrowTranslator({ apiKey, onResultChange, onOpenSettings }) {
                           )}
                         </span>
 
-                        <span className="text-sm font-bold text-slate-100">{chunk.text}</span>
+                        <span className="text-sm font-black text-pink-950 dark:text-white">{chunk.text}</span>
 
                         {isEditMode ? (
                           <div className="space-y-1.5 pt-1">
@@ -499,21 +502,21 @@ export function ArrowTranslator({ apiKey, onResultChange, onOpenSettings }) {
 
           {/* 🌟 2. 💡 상황별 원어민 추천 표현 (Native Speaker Recommendations) */}
           {recommendations.length > 0 && (
-            <section className="glass-panel p-8 space-y-6 border-sky-500/40 bg-slate-900/90 relative overflow-hidden shadow-2xl">
+            <section className="bg-white dark:bg-slate-900 border border-sky-300 dark:border-sky-500/40 rounded-3xl p-8 space-y-6 shadow-xl relative overflow-hidden">
               <div className="absolute -top-12 -right-12 w-48 h-48 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
 
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-sky-500/20 border border-sky-500/30 flex items-center justify-center text-sky-400 font-bold shrink-0">
-                  <Sparkles className="w-5 h-5 text-amber-400" />
+                <div className="w-10 h-10 rounded-xl bg-sky-100 dark:bg-sky-500/20 border border-sky-300 dark:border-sky-500/30 flex items-center justify-center text-sky-600 dark:text-sky-400 font-bold shrink-0">
+                  <Sparkles className="w-5 h-5 text-amber-500" />
                 </div>
                 <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
+                  <h3 className="text-lg sm:text-xl font-black text-slate-950 dark:text-white flex items-center gap-2">
                     <span>💡 상황별 원어민 추천 표현 (Native Speaker Recommendations)</span>
-                    <span className="text-xs px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-bold border border-amber-500/30">
+                    <span className="text-xs px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-500/20 text-amber-900 dark:text-amber-300 font-black border border-amber-300 dark:border-amber-500/30">
                       {recommendations.length > 1 ? `추천 ${recommendations.length}종 세트` : '직관적 표준 표현'}
                     </span>
                   </h3>
-                  <p className="text-xs text-slate-300">
+                  <p className="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-bold">
                     {recommendations.length > 1
                       ? '학습자님의 입력 상황에 맞춰 가장 자연스러운 원어민 구어체·뉘앙스별 추천 표현을 정통 정리해 드립니다.'
                       : '원어민이 일상에서 가장 직관적이고 정확하게 사용하는 표준 구어체 표현입니다.'}
@@ -577,17 +580,17 @@ export function ArrowTranslator({ apiKey, onResultChange, onOpenSettings }) {
           )}
 
           {/* 🌟 3. [요구사항 ㄱ] 학습자 입력 어순 vs 올바른 영어식 사고 순서 재배열 섹션 */}
-          <section className="glass-panel p-8 space-y-6 border-sky-500/30 bg-slate-900/80">
+          <section className="bg-white dark:bg-slate-900 border border-sky-300 dark:border-sky-500/30 rounded-3xl p-8 space-y-6 shadow-xl">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-sky-500/20 border border-sky-500/30 flex items-center justify-center text-sky-400">
+              <div className="w-10 h-10 rounded-xl bg-sky-100 dark:bg-sky-500/20 border border-sky-300 dark:border-sky-500/30 flex items-center justify-center text-sky-700 dark:text-sky-400 shrink-0">
                 <Compass className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-white flex items-center gap-2">
+                <h3 className="text-lg sm:text-xl font-black text-slate-950 dark:text-white flex items-center gap-2">
                   <span>학습자 입력 어순 ➔ 영어식 사고 순서 재배열</span>
-                  <span className="text-xs px-2.5 py-0.5 rounded-full bg-sky-500/20 text-sky-300 font-normal">어순 교정</span>
+                  <span className="text-xs px-2.5 py-0.5 rounded-full bg-sky-100 dark:bg-sky-500/20 text-sky-900 dark:text-sky-300 font-extrabold border border-sky-300 dark:border-sky-500/30">어순 교정</span>
                 </h3>
-                <p className="text-xs text-slate-300">
+                <p className="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-bold">
                   학습자님이 쏟아 놓은 배열을 거꾸로 번역하지 않는 영문의 시선 순서로 올바르게 다듬었습니다.
                 </p>
               </div>
@@ -596,26 +599,26 @@ export function ArrowTranslator({ apiKey, onResultChange, onOpenSettings }) {
             {/* 어순 비교 2D 카드 */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* 내 입력 어순 */}
-              <div className="p-5 rounded-xl bg-amber-500/10 border border-amber-500/20 space-y-2">
-                <span className="text-xs font-bold uppercase tracking-wider text-amber-400 block">
+              <div className="p-5 rounded-2xl bg-amber-100/90 dark:bg-amber-950/40 border border-amber-400 dark:border-amber-500/40 space-y-2 shadow-sm">
+                <span className="text-xs font-black uppercase tracking-wider text-amber-950 dark:text-amber-300 block">
                   📝 학습자가 입력한 단어 배열 (Original Input)
                 </span>
-                <p className="text-sm font-semibold text-amber-100 font-mono">
+                <p className="text-base sm:text-lg font-black text-amber-950 dark:text-amber-100 font-mono leading-relaxed select-all">
                   "{result.arrowKorean}"
                 </p>
-                <p className="text-xs text-slate-400 pt-1">
+                <p className="text-xs text-amber-900 dark:text-amber-200 font-bold pt-1">
                   💡 전치사가 어색하거나 한국어식 순서가 섞여 있을 수 있습니다.
                 </p>
               </div>
 
-              {/* 올바른 애로우 잉글리시 어순 */}
-              <div className="p-5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 space-y-2">
-                <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 block">
-                  ✨ 올바른 영어식 사고 순서 (Arrow English Brain Order)
+              {/* 올바른 큐피드 잉글리시 어순 */}
+              <div className="p-5 rounded-2xl bg-pink-100/90 dark:bg-pink-950/40 border border-pink-300 dark:border-pink-500/40 space-y-2 shadow-sm">
+                <span className="text-xs font-black uppercase tracking-wider text-pink-950 dark:text-pink-300 block">
+                  ✨ 올바른 큐피드 영어식 사고 순서 (Cupid English Brain Order)
                 </span>
-                <div className="flex flex-wrap items-center gap-1.5 text-xs font-bold text-emerald-200 pt-1">
+                <div className="flex flex-wrap items-center gap-2 text-xs font-black text-white pt-1">
                   {result.chunks.map((c, idx) => (
-                    <span key={idx} className="px-2 py-1 rounded bg-emerald-500/20 border border-emerald-500/30">
+                    <span key={idx} className="px-3 py-1.5 rounded-xl bg-pink-600 text-white font-black border border-pink-700 shadow-sm text-xs">
                       {c.text} ({c.english})
                     </span>
                   ))}
@@ -624,35 +627,35 @@ export function ArrowTranslator({ apiKey, onResultChange, onOpenSettings }) {
             </div>
 
             {/* 초등 눈높이 어순 교정 해설 */}
-            <div className="p-4 rounded-xl bg-slate-950/90 border border-slate-800 space-y-2 text-xs">
-              <strong className="text-amber-300 font-bold block flex items-center gap-1.5">
+            <div className="p-5 rounded-2xl bg-slate-950 text-white border border-slate-800 space-y-2 text-xs shadow-md">
+              <strong className="text-amber-300 font-black block flex items-center gap-1.5 text-sm">
                 <Sparkle className="w-4 h-4 text-amber-400" />
                 <span>👶 초등 눈높이 어순 이해 가이드: 왜 순서를 바꿔야 할까요?</span>
               </strong>
-              <p className="text-slate-300 leading-relaxed">
-                한국어는 <strong className="text-amber-200">"어디서(장소)"</strong>나 <strong className="text-amber-200">"어떻게(방법)"</strong>가 먼저 나오지만, 영어식 뇌는 주인공이 출발해서 <strong className="text-sky-300">손과 시선이 닿는 동작과 가까운 대상부터</strong> 먼저 떠올립니다! 그래서 <strong className="text-emerald-300">주인공 ➔ 동작 ➔ 대상 ➔ 전치사 ➔ 장소 ➔ 시간</strong> 순서로 말하면 머릿속에서 되돌아가서 번역할 필요가 전혀 없어집니다.
+              <p className="text-slate-100 leading-relaxed font-bold">
+                한국어는 <strong className="text-amber-300 font-black">"어디서(장소)"</strong>나 <strong className="text-amber-300 font-black">"어떻게(방법)"</strong>가 먼저 나오지만, 영어식 뇌는 주인공이 출발해서 <strong className="text-sky-300 font-black">손과 시선이 닿는 동작과 가까운 대상부터</strong> 먼저 떠올립니다! 그래서 <strong className="text-emerald-300 font-black">주인공 ➔ 동작 ➔ 대상 ➔ 전치사 ➔ 장소 ➔ 시간</strong> 순서로 말하면 머릿속에서 되돌아가서 번역할 필요가 전혀 없어집니다.
               </p>
             </div>
           </section>
 
-          {/* 🌟 3. 한글-영어 실생활 이미지 단어장 */}
-          <section className="glass-panel p-8 space-y-6 border-indigo-500/30">
+          {/* 🌟 4. 한글-영어 실생활 이미지 단어장 */}
+          <section className="bg-white dark:bg-slate-900 border border-pink-300 dark:border-pink-500/30 rounded-3xl p-8 space-y-6 shadow-xl">
             <div className="flex items-center justify-between flex-wrap gap-2">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
+                <div className="w-10 h-10 rounded-xl bg-pink-100 dark:bg-pink-500/20 border border-pink-300 dark:border-pink-500/30 flex items-center justify-center text-pink-600 dark:text-pink-400 shrink-0">
                   <ImageIcon className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white flex items-center gap-2">
+                  <h3 className="text-lg sm:text-xl font-black text-slate-950 dark:text-white flex items-center gap-2">
                     <span>🎨 1:1 한글-영어 실생활 이미지 단어장</span>
                   </h3>
-                  <p className="text-xs text-slate-300">
+                  <p className="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-bold">
                     실제 수업 방식처럼 해당 영단어(English Word)의 실생활 사물·장면 이미지를 구글 안심 검색으로 연동합니다.
                   </p>
                 </div>
               </div>
 
-              <span className="text-xs font-semibold px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 flex items-center gap-1">
+              <span className="text-xs font-extrabold px-3 py-1 rounded-full bg-pink-100 dark:bg-pink-500/10 text-pink-900 dark:text-pink-300 border border-pink-300 dark:border-pink-500/30 flex items-center gap-1">
                 🔒 Google SafeSearch Active (실생활 안심 이미지)
               </span>
             </div>
@@ -665,28 +668,28 @@ export function ArrowTranslator({ apiKey, onResultChange, onOpenSettings }) {
                   href={card.searchUrl || getEducationalGoogleImageSearchUrl(card.english)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-4 rounded-xl bg-slate-900/90 hover:bg-slate-800/90 border border-slate-700/80 hover:border-indigo-500 transition-all space-y-2 group shadow-md block"
+                  className="p-4 rounded-2xl bg-pink-50/80 dark:bg-slate-950 hover:bg-pink-100 dark:hover:bg-slate-800 border border-pink-300 dark:border-slate-800 hover:border-pink-500 transition-all space-y-2 group shadow-md block"
                   title={`클릭하면 영단어 '${card.english}'의 실생활 구글 이미지가 열립니다`}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-[11px] font-bold px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300">
+                    <span className="text-[11px] font-black px-2.5 py-0.5 rounded-md bg-pink-600 text-white shadow-sm">
                       {card.role || `조각 ${idx + 1}`}
                     </span>
-                    <span className="text-xs text-sky-400 group-hover:text-sky-300 flex items-center gap-1 font-semibold">
+                    <span className="text-xs text-pink-700 dark:text-pink-400 group-hover:text-pink-900 dark:group-hover:text-pink-300 flex items-center gap-1 font-extrabold">
                       <span>📷 영단어 실사 이미지</span>
                       <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                     </span>
                   </div>
 
                   <div className="space-y-0.5">
-                    <span className="text-xs text-slate-400 block font-medium">한글: {card.korean}</span>
-                    <span className="text-sm font-extrabold text-white font-brand block group-hover:text-amber-300 transition-colors">
+                    <span className="text-xs text-slate-900 dark:text-slate-200 block font-extrabold">한글: {card.korean}</span>
+                    <span className="text-base font-black text-pink-950 dark:text-white font-brand block group-hover:text-pink-700 transition-colors">
                       영어: {card.english}
                     </span>
                   </div>
 
-                  <div className="pt-2 text-[11px] text-slate-500 group-hover:text-slate-400 flex items-center gap-1">
-                    <ImageIcon className="w-3 h-3 text-emerald-400" />
+                  <div className="pt-2 text-[11px] text-pink-800 dark:text-slate-400 font-bold flex items-center gap-1">
+                    <ImageIcon className="w-3 h-3 text-pink-600" />
                     <span>Google Image ('{card.english}' 실생활 연동)</span>
                   </div>
                 </a>
@@ -694,45 +697,43 @@ export function ArrowTranslator({ apiKey, onResultChange, onOpenSettings }) {
             </div>
           </section>
 
-          {/* 🌟 4. Arrow English Principles & Physical Eye-Movement Explanation */}
-          <section className="glass-panel p-8 space-y-4">
+          {/* 🌟 5. Cupid English Principles & Physical Eye-Movement Explanation */}
+          <section className="bg-white dark:bg-slate-900 border border-pink-300 dark:border-slate-800 rounded-3xl p-8 space-y-4 shadow-xl">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center text-indigo-400">
+              <div className="w-8 h-8 rounded-xl bg-pink-100 dark:bg-pink-500/20 flex items-center justify-center text-pink-600 dark:text-pink-400 shrink-0">
                 <Info className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-white">
-                  애로우 잉글리시 시선 이동 원리 해설
+                <h3 className="text-lg font-black text-slate-950 dark:text-white">
+                  큐피드 잉글리시 시선 이동 원리 해설
                 </h3>
-                <p className="text-xs text-slate-400">
+                <p className="text-xs text-slate-700 dark:text-slate-300 font-bold">
                   영어를 번역하지 않고 뇌에서 영상으로 곧바로 그려내는 훈련 해설
                 </p>
               </div>
             </div>
 
-
-            <div className="bg-slate-900/60 rounded-xl p-6 border border-slate-800/80 space-y-3">
+            <div className="bg-pink-50/80 dark:bg-slate-900/60 rounded-2xl p-6 border border-pink-300 dark:border-slate-800/80 space-y-3 shadow-inner">
               {result.explanation.map((step, idx) => (
-                <div key={idx} className="flex items-start gap-3 text-sm text-slate-200 leading-relaxed">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-1" />
+                <div key={idx} className="flex items-start gap-3 text-sm text-slate-900 dark:text-slate-200 leading-relaxed font-bold">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-1" />
                   <div>
                     {step.split(/\*\*(.*?)\*\*/g).map((part, pIdx) =>
                       pIdx % 2 === 1
-                        ? <strong key={pIdx} className="text-sky-300 font-semibold">{part}</strong>
+                        ? <strong key={pIdx} className="text-pink-700 dark:text-sky-300 font-black">{part}</strong>
                         : <span key={pIdx}>{part}</span>
                     )}
                   </div>
                 </div>
               ))}
             </div>
-
           </section>
 
           {/* 🌟 5. Preposition Visual Map */}
           {result.prepositions && result.prepositions.length > 0 && (
-            <section className="glass-panel p-8 space-y-4">
-              <h3 className="text-lg font-bold text-white flex items-center gap-2">
-                <Compass className="w-5 h-5 text-amber-400" />
+            <section className="bg-white dark:bg-slate-900 border border-pink-300 dark:border-slate-800 rounded-3xl p-8 space-y-4 shadow-xl">
+              <h3 className="text-lg font-black text-slate-950 dark:text-white flex items-center gap-2">
+                <Compass className="w-5 h-5 text-amber-500" />
                 <span>문장 속 핵심 전치사 그림 개념 (Visual Preposition)</span>
               </h3>
 
@@ -761,26 +762,26 @@ export function ArrowTranslator({ apiKey, onResultChange, onOpenSettings }) {
 
           {/* 🌟 6. AI Learner Expression Refinement & Native Coaching */}
           {result.correction && (
-            <section className="glass-panel p-8 space-y-6 border-emerald-500/40 relative overflow-hidden">
+            <section className="bg-white dark:bg-slate-900 border border-emerald-300 dark:border-emerald-500/40 rounded-3xl p-8 space-y-6 shadow-xl relative overflow-hidden">
               <div className="absolute -top-12 -right-12 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
 
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-500/30 to-sky-500/30 flex items-center justify-center text-emerald-300 border border-emerald-500/40 shadow-lg shrink-0">
+                <div className="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-500/20 flex items-center justify-center text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-500/40 shadow-md shrink-0">
                   <CheckCircle2 className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-extrabold text-white flex items-center gap-2">
+                  <h3 className="text-xl sm:text-2xl font-black text-slate-950 dark:text-white flex items-center gap-2">
                     <span>학습자 표현 다듬기 & 1:1 원어민 뉘앙스 완성 코칭</span>
                   </h3>
-                  <p className="text-xs text-slate-300">
+                  <p className="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-bold">
                     영어식 사고를 익혀가는 학습자님을 위해 뇌속 3D 그림 차이와 듣기·말하기 직관 팁으로 표현을 근사하게 업그레이드해 드립니다.
                   </p>
                 </div>
               </div>
 
               {result.correction.coachGreeting && (
-                <div className="p-4 rounded-xl bg-gradient-to-r from-emerald-950/80 to-slate-900/90 border border-emerald-500/30 text-xs sm:text-sm text-emerald-200 leading-relaxed space-y-1">
-                  <p className="font-medium">{result.correction.coachGreeting}</p>
+                <div className="p-4 rounded-2xl bg-emerald-100/90 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-500/30 text-xs sm:text-sm text-emerald-950 dark:text-emerald-200 leading-relaxed space-y-1 shadow-sm">
+                  <p className="font-extrabold">{result.correction.coachGreeting}</p>
                 </div>
               )}
 
@@ -857,8 +858,8 @@ export function ArrowTranslator({ apiKey, onResultChange, onOpenSettings }) {
               {/* Point-by-Point Coaching */}
               {result.correction.points && result.correction.points.length > 0 && (
                 <div className="space-y-4 pt-2">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300 flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-amber-400" />
+                  <h4 className="text-xs font-black uppercase tracking-wider text-slate-950 dark:text-slate-100 flex items-center gap-2">
+                    <Sparkles className="w-4 h-4 text-amber-500" />
                     <span>5D 마스터클래스 심층 표현 업그레이드 (3D 이미지 · 직청직해 · 입근육 훈련)</span>
                   </h4>
 

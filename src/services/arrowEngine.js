@@ -1,5 +1,5 @@
-// src/services/arrowEngine.js
-// Arrow English AI Studio - Gemini API 전용 변환 엔진
+// src/services/arrowEngine.js (Cupid English Engine)
+// Cupid English AI Studio - Gemini API 전용 변환 엔진
 import { PREPOSITION_LIST } from './prepositionData.js';
 
 export const PREPOSITION_DICTIONARY = PREPOSITION_LIST;

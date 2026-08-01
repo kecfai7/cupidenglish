@@ -139,7 +139,7 @@ export function generateEmailHTML(result, senderEmail = '') {
     minute: '2-digit'
   });
 
-  const subjectText = result.english || result.arrowKorean || 'Arrow English Result';
+  const subjectText = result.english || result.arrowKorean || 'Cupid English Result';
 
   // Recommendations and Vocab Nuances
   const recommendations = getNativeRecommendations(result) || [];
@@ -302,7 +302,7 @@ export function generateEmailHTML(result, senderEmail = '') {
         <!-- Header -->
         <div style="border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center;">
           <div>
-            <div style="font-size: 20px; font-weight: 800; color: #4f46e5; letter-spacing: -0.5px;">🏹 Arrow English AI Studio</div>
+            <div style="font-size: 20px; font-weight: 800; color: #ec4899; letter-spacing: -0.5px;">💘 Cupid English AI Studio</div>
             <div style="font-size: 12px; color: #64748b; margin-top: 2px;">뇌 구조에 맞춘 직관 영어 어순 분석 & 이미지 단어 학습 완전 원문 리포트</div>
           </div>
           <div style="font-size: 11px; color: #64748b; text-align: right;">
@@ -313,7 +313,7 @@ export function generateEmailHTML(result, senderEmail = '') {
 
         <!-- 6-step Banner -->
         <div style="background-color: #e0e7ff; border: 1px solid #c7d2fe; border-radius: 10px; padding: 10px 14px; margin-bottom: 16px; font-size: 11px; color: #3730a3; text-align: center;">
-          <strong>🎯 원어민 뇌속 화살표 순서 (6단계):</strong>
+          <strong>💘 원어민 뇌속 큐피드 순서 (6단계):</strong>
           1. 주인공(주어) ➔ 2. 동작 ➔ 3. 가까운 대상 ➔ 4. 전치사 ➔ 5. 장소 ➔ 6. 시간
         </div>
 
@@ -404,7 +404,7 @@ export function generateEmailHTML(result, senderEmail = '') {
 
         <!-- Footer -->
         <div style="margin-top: 24px; text-align: center; font-size: 11px; color: #94a3b8; border-top: 1px solid #e2e8f0; padding-top: 12px;">
-          © 2026 Arrow English AI Studio. All rights reserved. Full Analysis Report.
+          © 2026 Cupid English AI Studio. All rights reserved. Full Analysis Report.
         </div>
 
       </div>
@@ -418,7 +418,7 @@ export function generateEmailHTML(result, senderEmail = '') {
  */
 export async function copyEmailHtmlToClipboard(result, senderEmail = '') {
   const htmlContent = generateEmailHTML(result, senderEmail);
-  const textFallback = `[Arrow English AI Report]\nExact Natural Standard English: "${result.english}"\nInput: "${result.arrowKorean}"`;
+  const textFallback = `[Cupid English AI Report]\nExact Natural Standard English: "${result.english}"\nInput: "${result.arrowKorean}"`;
 
   try {
     if (navigator.clipboard && window.ClipboardItem) {
@@ -449,12 +449,12 @@ export async function copyEmailHtmlToClipboard(result, senderEmail = '') {
  * Downloads a formatted `.eml` (email file format) or `.html` file that opens natively in Outlook, Thunderbird, or Apple Mail.
  */
 export function downloadEmlFile(result, senderEmail = '', recipientEmails = []) {
-  const subject = result.english || result.arrowKorean || 'Arrow English Report';
+  const subject = result.english || result.arrowKorean || 'Cupid English Report';
   const htmlBody = generateEmailHTML(result, senderEmail);
   const now = new Date().toUTCString();
 
-  const toLine = recipientEmails.length > 0 ? recipientEmails.join(', ') : 'recipients@arrowenglish.com';
-  const fromLine = senderEmail || 'sender@arrowenglish.com';
+  const toLine = recipientEmails.length > 0 ? recipientEmails.join(', ') : 'recipients@cupidenglish.com';
+  const fromLine = senderEmail || 'sender@cupidenglish.com';
 
   const emlContent = [
     `From: <${fromLine}>`,
@@ -478,7 +478,7 @@ export function downloadEmlFile(result, senderEmail = '', recipientEmails = []) 
     .replace(/_+/g, '_');
 
   link.href = url;
-  link.setAttribute('download', `ArrowEnglish_Email_${cleanTitle || 'Report'}.eml`);
+  link.setAttribute('download', `CupidEnglish_Email_${cleanTitle || 'Report'}.eml`);
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -489,11 +489,11 @@ export function downloadEmlFile(result, senderEmail = '', recipientEmails = []) 
  * Triggers mailto link with recipients and subject = exact natural standard English
  */
 export function sendEmailViaMailClient(result, senderEmail = '', recipientEmails = []) {
-  const subject = encodeURIComponent(result.english || result.arrowKorean || 'Arrow English Report');
+  const subject = encodeURIComponent(result.english || result.arrowKorean || 'Cupid English Report');
   const recipients = recipientEmails.map(e => e.trim()).filter(Boolean).join(',');
 
   const bodySummary = encodeURIComponent(
-    `🏹 Arrow English AI Studio - 어순 변환 리포트\n\n` +
+    `💘 Cupid English AI Studio - 어순 변환 리포트\n\n` +
     `Exact Natural Standard English:\n"${result.english}"\n\n` +
     `학습자 입력 어순: "${result.arrowKorean}"\n\n` +
     `영어식 사고 순서:\n${(result.chunks || []).map(c => `${c.text}(${c.english})`).join(' ➔ ')}\n\n` +
@@ -514,7 +514,7 @@ export function sendEmailViaEmailJS(result, senderEmail, recipientEmails, emailJ
     return Promise.reject(new Error('EmailJS 연동 설정(Service ID, Template ID, Public Key)이 지정되지 않았습니다.'));
   }
 
-  const subject = result.english || result.arrowKorean || 'Arrow English Report';
+  const subject = result.english || result.arrowKorean || 'Cupid English Report';
   const htmlContent = generateEmailHTML(result, senderEmail);
 
   // Send requests to EmailJS API
@@ -548,7 +548,7 @@ export function sendEmailViaEmailJS(result, senderEmail, recipientEmails, emailJ
   });
 }
 
-const EMAIL_HISTORY_KEY = 'arrow_english_email_history';
+const EMAIL_HISTORY_KEY = 'cupid_english_email_history';
 
 /**
  * Get stored email dispatch history
@@ -571,7 +571,7 @@ export function saveEmailDispatchRecord({ result, senderEmail, recipientEmails, 
     const newRecord = {
       id: `email_log_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`,
       timestamp: new Date().toISOString(),
-      english: result?.english || result?.arrowKorean || 'Arrow English Report',
+      english: result?.english || result?.arrowKorean || 'Cupid English Report',
       arrowKorean: result?.arrowKorean || '',
       senderEmail: senderEmail || '(미지정)',
       recipientEmails: recipientEmails || [],

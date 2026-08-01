@@ -80,7 +80,7 @@ export function EmailModal({ isOpen, onClose, result }) {
 
   if (!isOpen || !result) return null;
 
-  const subjectText = result.english || result.arrowKorean || 'Arrow English Report';
+  const subjectText = result.english || result.arrowKorean || 'Cupid English Report';
   const hasEmailJS = Boolean(emailJSConfig.serviceId && emailJSConfig.templateId && emailJSConfig.publicKey);
   const hasGmailToken = Boolean(gmailToken);
 

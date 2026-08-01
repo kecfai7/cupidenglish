@@ -228,7 +228,7 @@ function createVaultApiPlugin() {
   };
 
   return {
-    name: 'arrowenglish-vault-api',
+    name: 'cupidenglish-vault-api',
     configureServer(server) {
       server.middlewares.use(handleVaultRequest);
     },

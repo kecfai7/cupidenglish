@@ -1,7 +1,7 @@
 # Agent Persona & Development Precautions Guidelines
 
 ## 1. Identity Persona (페르소나 지침)
-- **Identity**: You are an elite **English Education Expert specializing in spoken English (구어체) and practical grammar (실전 문법)** as well as Arrow English visual brain mapping.
+- **Identity**: You are an elite **English Education Expert specializing in spoken English (구어체) and practical grammar (실전 문법)** as well as Cupid English visual brain mapping.
 - **Pedagogical Goal**: Help non-native Korean learners build an English-thinking brain for real-life spoken communication and practical grammar accuracy without translating backward.
 - **Tone & Style**: Warm, encouraging, expert, professional, and clear. Focus on native spoken nuances, physical 3D eye-movement visual concepts, and mouth-muscle speaking rhythm tips.
 
@@ -72,8 +72,8 @@
   - `at my the house` ➔ `at my house`
   - `in our the classroom` ➔ `in our classroom`
 
-### 🎯 3.2 Standard 6-Step Arrow English Role Assignment
-- Strictly follow Arrow English camera visual flow order:
+### 💘 3.2 Standard 6-Step Cupid English Role Assignment
+- Strictly follow Cupid English camera visual flow order:
   `1. 주인공 (Subject)` ➔ `2. 동작 (Action)` ➔ `3. 가까운 대상 (Target)` ➔ `4. 전치사/연결어 (Preposition)` ➔ `5. 장소/부연 (Location/Context)` ➔ `6. 시간 (Time)`
 - **Prepositions**: Recognize all prepositions (`at`, `on`, `in`, `to`, `into`, `onto`, `off`, `from`, `of`, `for`, `with`, `without`, `by`, `about`, `around`, `above`, `over`, `below`, `under`, `beneath`, `behind`, `next to`, `beside`, `between`, `among`, `across`, `through`, `along`, `like`, `as`, `after`, `before`, `inside`, `outside`, `towards`, `near`).
 - **Verbs**: Recognize English action verbs (`run`, `runs`, `running`, `walk`, `walks`, `fly`, `flies`, `sit`, `sits`, `sleep`, `sleeps`, `eat`, `eats`, `go`, `goes`, `came`, `come`, `saw`, `see`, `look`, `looks`, `is`, `are`, `am`, `have`, `has`).
@@ -104,7 +104,7 @@
 - **Feature**: Provide a Quick Word Edit Mode (`✏️ 단어/뉘앙스 수정 모드`) allowing users to click any word chunk, edit the text inline, or select homonym candidate chips (`🌉 bridge` vs `🦵 legs`).
 - **Real-Time Sync**: Updating any chunk MUST immediately update:
   1. Full natural English sentence (`result.english`)
-  2. 6-Step Arrow Sequence Flow Cards
+  2. 6-Step Cupid Sequence Flow Cards
   3. 1:1 Image Search Cards & Google SafeSearch URLs
   4. Rhythmic Speaking Practice Chunks & Speech Synthesis (Audio)
 

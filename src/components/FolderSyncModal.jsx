@@ -120,50 +120,50 @@ export function FolderSyncModal({ isOpen, onClose, onShowToast }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fade-in">
-      <div className="glass-panel w-full max-w-2xl bg-slate-900/95 border-slate-700/80 shadow-2xl rounded-3xl overflow-hidden flex flex-col max-h-[90vh]">
+      <div className="glass-panel w-full max-w-2xl bg-white/95 dark:bg-slate-900/95 border-pink-500/30 dark:border-slate-700/80 shadow-2xl rounded-3xl overflow-hidden flex flex-col max-h-[90vh]">
         {/* Header */}
-        <div className="p-6 border-b border-slate-800 flex items-center justify-between bg-slate-950/50">
+        <div className="p-6 border-b border-pink-500/20 dark:border-slate-800 flex items-center justify-between bg-white/90 dark:bg-slate-950/50">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center border border-indigo-500/30">
-              <Cloud className="w-5 h-5 text-indigo-400 animate-pulse" />
+            <div className="w-10 h-10 rounded-2xl bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 flex items-center justify-center border border-indigo-500/30">
+              <Cloud className="w-5 h-5 text-indigo-600 dark:text-indigo-400 animate-pulse" />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-white flex items-center gap-2">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
                 <span>학습자료실 폴더 연동 & 구글 드라이브 동기화</span>
               </h3>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-slate-600 dark:text-slate-400 font-medium">
                 PC를 바꿔도 학습 자료가 사라지지 않도록 구글 드라이브 및 자동 동기화를 설정하세요.
               </p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800/80 transition-colors"
+            className="p-2 rounded-xl text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-pink-100 dark:hover:bg-slate-800/80 transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Current Connection Banner */}
-        <div className="px-6 py-3 bg-slate-950/90 border-b border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs">
+        <div className="px-6 py-3 bg-white/90 dark:bg-slate-950/90 border-b border-pink-500/20 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs">
           <div className="flex items-center gap-2">
-            <span className="text-slate-400 font-semibold">현재 연결 상태:</span>
+            <span className="text-slate-700 dark:text-slate-400 font-bold">현재 연결 상태:</span>
             {dirStatus.isConnected ? (
               <span className={`px-2.5 py-1 rounded-full font-bold flex items-center gap-1.5 ${
                 dirStatus.isCloudSync
-                  ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
-                  : 'bg-indigo-500/20 text-indigo-300 border border-indigo-500/40'
+                  ? 'bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border border-emerald-500/40'
+                  : 'bg-indigo-500/20 text-indigo-800 dark:text-indigo-300 border border-indigo-500/40'
               }`}>
-                {dirStatus.isCloudSync ? <Cloud className="w-3.5 h-3.5 text-emerald-400" /> : <HardDrive className="w-3.5 h-3.5 text-indigo-400" />}
+                {dirStatus.isCloudSync ? <Cloud className="w-3.5 h-3.5 text-emerald-500" /> : <HardDrive className="w-3.5 h-3.5 text-indigo-500" />}
                 <span>{dirStatus.isCloudSync ? '☁️ 구글 드라이브' : '💻 로컬 PC 폴더'}: [{dirStatus.folderName}]</span>
               </span>
             ) : dirStatus.needsPermissionGrant ? (
-              <span className="px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 font-bold flex items-center gap-1.5 animate-pulse">
-                <Cloud className="w-3.5 h-3.5 text-amber-400" />
+              <span className="px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-900 dark:text-amber-300 border border-amber-500/40 font-bold flex items-center gap-1.5 animate-pulse">
+                <Cloud className="w-3.5 h-3.5 text-amber-500" />
                 <span>기존 지정 폴더: [{dirStatus.folderName}] (원클릭 권한 승인 필요)</span>
               </span>
             ) : (
-              <span className="px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/30 font-semibold">
+              <span className="px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-900 dark:text-amber-300 border border-amber-500/30 font-bold">
                 ⚠️ 연동 안 됨 (브라우저 내 임시 저장)
               </span>
             )}
@@ -172,7 +172,7 @@ export function FolderSyncModal({ isOpen, onClose, onShowToast }) {
           {(dirStatus.isConnected || dirStatus.hasStoredDirectory) && (
             <button
               onClick={handleDisconnect}
-              className="text-[11px] text-slate-400 hover:text-rose-300 underline underline-offset-2 transition-colors"
+              className="text-[11px] text-slate-500 dark:text-slate-400 hover:text-rose-600 dark:hover:text-rose-300 underline underline-offset-2 transition-colors font-bold"
             >
               연동 해제
             </button>
@@ -180,13 +180,13 @@ export function FolderSyncModal({ isOpen, onClose, onShowToast }) {
         </div>
 
         {/* Tabs */}
-        <div className="flex items-center border-b border-slate-800 bg-slate-950/30 px-6 pt-3 gap-2">
+        <div className="flex items-center border-b border-pink-500/20 dark:border-slate-800 bg-white/80 dark:bg-slate-950/30 px-6 pt-3 gap-2">
           <button
             onClick={() => setActiveTab('cloud')}
             className={`px-4 py-2.5 rounded-t-xl text-xs font-bold transition-all flex items-center gap-2 border-b-2 ${
               activeTab === 'cloud'
-                ? 'bg-slate-900 text-emerald-400 border-emerald-500 shadow-sm'
-                : 'text-slate-400 hover:text-slate-200 border-transparent'
+                ? 'bg-white dark:bg-slate-900 text-emerald-700 dark:text-emerald-400 border-emerald-500 shadow-sm'
+                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 border-transparent'
             }`}
           >
             <Cloud className="w-4 h-4" />
@@ -197,12 +197,12 @@ export function FolderSyncModal({ isOpen, onClose, onShowToast }) {
             onClick={() => setActiveTab('local')}
             className={`px-4 py-2.5 rounded-t-xl text-xs font-bold transition-all flex items-center gap-2 border-b-2 ${
               activeTab === 'local'
-                ? 'bg-slate-900 text-indigo-400 border-indigo-500 shadow-sm'
-                : 'text-slate-400 hover:text-slate-200 border-transparent'
+                ? 'bg-white dark:bg-slate-900 text-indigo-700 dark:text-indigo-400 border-indigo-500 shadow-sm'
+                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 border-transparent'
             }`}
           >
             <HardDrive className="w-4 h-4" />
-            <span>💻 PC 로컬 폴더</span>
+            <span>💻 PC 지정 폴더</span>
           </button>
 
           <button
@@ -229,7 +229,7 @@ export function FolderSyncModal({ isOpen, onClose, onShowToast }) {
                   <span>PC 이동 시 복사/붙여넣기가 필요 없는 구글 드라이브 동기화</span>
                 </div>
                 <p className="text-xs text-slate-300 leading-relaxed">
-                  Google Drive PC용 앱이 설치되어 있으면, 내 드라이브 안의 특정 폴더(예: <code className="bg-slate-950 px-1.5 py-0.5 rounded text-emerald-300">Google Drive\ArrowEnglish</code>)를 한 번 지정해두면, 다시 접속해도 폴더를 새로 선택할 필요 없이 클릭 한 번으로 자동 유지됩니다!
+                  Google Drive PC용 앱이 설치되어 있으면, 내 드라이브 안의 특정 폴더(예: <code className="bg-slate-950 px-1.5 py-0.5 rounded text-emerald-300">Google Drive\CupidEnglish</code>)를 한 번 지정해두면, 다시 접속해도 폴더를 새로 선택할 필요 없이 클릭 한 번으로 자동 유지됩니다!
                 </p>
               </div>
 
@@ -296,7 +296,7 @@ export function FolderSyncModal({ isOpen, onClose, onShowToast }) {
                   <span>내 PC 로컬 폴더 직접 연동</span>
                 </div>
                 <p className="text-xs text-slate-400 leading-relaxed">
-                  내 컴퓨터의 원하는 일반 폴더(예: <code className="bg-slate-900 px-1 text-indigo-300">C:\ArrowEnglishData</code>)를 지정하면, 웹 저장소 대신 내 PC 폴더에 <code className="text-slate-300">.json</code> 파일 형식으로 실시간 보관됩니다.
+                  내 컴퓨터의 원하는 일반 폴더(예: <code className="bg-slate-900 px-1 text-indigo-300">C:\CupidEnglishData</code>)를 지정하면, 웹 저장소 대신 내 PC 폴더에 <code className="text-slate-300">.json</code> 파일 형식으로 실시간 보관됩니다.
                 </p>
               </div>
 

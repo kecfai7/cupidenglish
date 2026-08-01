@@ -1,8 +1,8 @@
-const VAULT_STORAGE_KEY = 'arrow_study_vault';
-const MASTERED_COUNT_KEY = 'arrow_vault_mastered_count';
-const VAULT_UPDATED_EVENT = 'arrow-vault-updated';
+const VAULT_STORAGE_KEY = 'cupid_study_vault';
+const MASTERED_COUNT_KEY = 'cupid_vault_mastered_count';
+const VAULT_UPDATED_EVENT = 'cupid-vault-updated';
 
-const DB_NAME = 'ArrowEnglishDB';
+const DB_NAME = 'CupidEnglishDB';
 const DB_VERSION = 2;
 const STORE_NAME = 'handles';
 const VAULT_ITEMS_STORE = 'vault_items';
@@ -376,7 +376,7 @@ export function exportVaultBackup() {
 
   const backupData = {
     version: 1,
-    appName: 'Arrow English AI',
+    appName: 'Cupid English AI',
     exportedAt: new Date().toISOString(),
     masteredCount,
     itemsCount: items.length,
@@ -388,7 +388,7 @@ export function exportVaultBackup() {
   const url = URL.createObjectURL(blob);
 
   const dateStr = new Date().toISOString().slice(0, 10);
-  const fileName = `arrow_study_vault_backup_${dateStr}.json`;
+  const fileName = `cupid_study_vault_backup_${dateStr}.json`;
 
   const link = document.createElement('a');
   link.href = url;

@@ -146,9 +146,9 @@ export function PrepositionGuide() {
         <div className="absolute -top-12 -right-12 w-48 h-48 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-12 -left-12 w-48 h-48 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold">
-          <Compass className="w-4 h-4 text-indigo-400" />
-          <span>애로우 잉글리시 시각적 이미지 사전 (Visual Preposition Map)</span>
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-300 text-xs font-semibold">
+          <Compass className="w-4 h-4 text-pink-400" />
+          <span>💘 큐피드 잉글리시 시각적 이미지 사전 (Visual Preposition Map)</span>
         </div>
 
         <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
@@ -157,7 +157,7 @@ export function PrepositionGuide() {
 
         <p className="text-slate-300 text-sm max-w-3xl mx-auto leading-relaxed">
           전치사를 한국어 뜻(~에, ~의, ~를 위해)으로 암기하지 마세요!
-          주인공에서 출발한 시선과 물리적 동작의 화살표 그림으로 단 한 번에 직관 이해합니다.
+          주인공에서 출발한 시선과 물리적 동작의 큐피드 카메라 그림으로 단 한 번에 직관 이해합니다.
         </p>
 
         {/* Search Bar */}
@@ -168,7 +168,7 @@ export function PrepositionGuide() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="전치사, 한국어 의미, 뉘앙스 검색 (예: at, on, 시간, 기한, 접촉)..."
-            className="w-full pl-11 pr-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white placeholder-slate-400 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 text-sm transition-all shadow-inner"
+            className="w-full pl-11 pr-4 py-3 rounded-xl bg-white/90 dark:bg-slate-900/90 border border-pink-500/30 dark:border-slate-700/80 text-slate-800 dark:text-white placeholder-slate-400 focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/20 text-sm transition-all shadow-inner"
           />
           {searchTerm && (
             <button
@@ -201,10 +201,10 @@ export function PrepositionGuide() {
                     setSelectedCategory(cat.id);
                     setShowNuancesOnly(false);
                   }}
-                  className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 whitespace-nowrap ${
+                  className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all flex items-center gap-2 whitespace-nowrap ${
                     selectedCategory === cat.id && !showNuancesOnly
                       ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/30 ring-2 ring-indigo-400/40'
-                      : 'glass-panel text-slate-300 hover:text-white hover:bg-slate-800/80 border-slate-700/60'
+                      : 'bg-white/80 dark:bg-slate-900/60 text-slate-900 dark:text-slate-100 hover:text-indigo-600 dark:hover:text-white border border-pink-300 dark:border-slate-700/60 shadow-sm'
                   }`}
                 >
                   <span>{cat.icon}</span>
@@ -212,7 +212,7 @@ export function PrepositionGuide() {
                   <span className={`text-[10px] px-2 py-0.5 rounded-full font-extrabold ${
                     selectedCategory === cat.id && !showNuancesOnly
                       ? 'bg-indigo-700 text-white'
-                      : 'bg-slate-800 text-slate-400'
+                      : 'bg-pink-100 dark:bg-slate-800 text-pink-900 dark:text-slate-300'
                   }`}>
                     {count}
                   </span>
@@ -224,10 +224,10 @@ export function PrepositionGuide() {
           {/* Toggle Nuance Comparison View */}
           <button
             onClick={() => setShowNuancesOnly(!showNuancesOnly)}
-            className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 whitespace-nowrap ${
+            className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold transition-all flex items-center gap-2 whitespace-nowrap ${
               showNuancesOnly
                 ? 'bg-amber-500 text-slate-950 font-extrabold shadow-lg shadow-amber-500/30'
-                : 'glass-panel text-amber-300 border-amber-500/30 hover:bg-amber-500/10'
+                : 'bg-white/80 dark:bg-slate-900/60 text-amber-800 dark:text-amber-300 border border-amber-400 dark:border-amber-500/30 hover:bg-amber-100 dark:hover:bg-amber-500/10 shadow-sm'
             }`}
           >
             <Sparkles className="w-4 h-4" />
@@ -237,19 +237,19 @@ export function PrepositionGuide() {
 
         {/* Selected Category Description Banner */}
         {!showNuancesOnly && (
-          <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-4 flex items-center justify-between text-xs sm:text-sm text-slate-300">
+          <div className="bg-white/80 dark:bg-slate-900/60 border border-pink-500/20 dark:border-slate-800 rounded-xl p-4 flex items-center justify-between text-xs sm:text-sm text-slate-800 dark:text-slate-300 shadow-sm">
             <div className="flex items-center gap-2">
               <span className="text-lg">
                 {PREPOSITION_CATEGORIES.find(c => c.id === selectedCategory)?.icon}
               </span>
-              <span className="font-semibold text-white">
+              <span className="font-bold text-slate-900 dark:text-white">
                 {PREPOSITION_CATEGORIES.find(c => c.id === selectedCategory)?.englishName}:
               </span>
-              <span className="text-slate-400">
+              <span className="text-slate-600 dark:text-slate-400 font-medium">
                 {PREPOSITION_CATEGORIES.find(c => c.id === selectedCategory)?.desc}
               </span>
             </div>
-            <span className="text-slate-500 font-mono hidden sm:inline">
+            <span className="text-slate-500 font-mono hidden sm:inline font-semibold">
               총 {filteredPrepositions.length}개 항목 표시 중
             </span>
           </div>
@@ -273,11 +273,11 @@ export function PrepositionGuide() {
             /* NUANCE COMPARISON CARDS VIEW */
             <div className="space-y-6 animate-fade-in">
               <div className="glass-panel p-6 border-amber-500/30 bg-amber-500/5 space-y-2">
-                <h3 className="text-lg font-bold text-amber-300 flex items-center gap-2">
+                <h3 className="text-lg font-bold text-amber-700 dark:text-amber-300 flex items-center gap-2">
                   <Sparkles className="w-5 h-5" />
                   <span>전치사 뉘앙스 비교 꿀팁 (Nuance Comparison Guide)</span>
                 </h3>
-                <p className="text-xs text-slate-300 leading-relaxed">
+                <p className="text-xs text-slate-700 dark:text-slate-300 leading-relaxed font-medium">
                   영어 시험과 실제 회화에서 가장 많이 헷갈리는 전치사 쌍(in vs at, by vs until, for vs during 등)의 핵심 차이를 그림과 함께 확실하게 잡아드립니다.
                 </p>
               </div>
@@ -289,39 +289,39 @@ export function PrepositionGuide() {
                     className="glass-panel p-6 space-y-4 hover:border-amber-500/40 transition-all duration-300"
                   >
                     <div className="flex items-center justify-between">
-                      <h4 className="text-lg font-bold text-white flex items-center gap-2">
+                      <h4 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-amber-400" />
                         <span>{nuance.title}</span>
                       </h4>
-                      <span className="text-[11px] font-semibold text-amber-300 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20">
+                      <span className="text-[11px] font-bold text-amber-800 dark:text-amber-300 bg-amber-500/10 px-2.5 py-1 rounded-full border border-amber-500/20">
                         {nuance.tag}
                       </span>
                     </div>
 
-                    <p className="text-xs text-slate-300 font-medium bg-slate-950/70 p-3 rounded-xl border border-slate-800 leading-relaxed">
+                    <p className="text-xs text-slate-800 dark:text-slate-300 font-medium bg-white/90 dark:bg-slate-950/70 p-3 rounded-xl border border-pink-500/20 dark:border-slate-800 leading-relaxed shadow-sm">
                       {nuance.summary}
                     </p>
 
                     <div className="space-y-2 pt-2">
                       {nuance.details.map((detail, dIdx) => (
-                        <div key={dIdx} className="bg-slate-900/90 rounded-xl p-3 border border-slate-800/80 text-xs space-y-1.5">
-                          <span className="text-[11px] font-bold text-slate-400 block uppercase tracking-wider">
+                        <div key={dIdx} className="bg-white/90 dark:bg-slate-900/90 rounded-xl p-3 border border-pink-500/20 dark:border-slate-800/80 text-xs space-y-1.5 shadow-sm">
+                          <span className="text-[11px] font-bold text-slate-700 dark:text-slate-400 block uppercase tracking-wider">
                             📌 {detail.aspect}
                           </span>
-                          <div className="grid grid-cols-1 gap-1 text-slate-200">
-                            <p className="flex items-center gap-1.5 text-sky-300">
-                              <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-sky-400" />
+                          <div className="grid grid-cols-1 gap-1 text-slate-800 dark:text-slate-200 font-medium">
+                            <p className="flex items-center gap-1.5 text-sky-800 dark:text-sky-300">
+                              <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-sky-500" />
                               <span>{detail.first}</span>
                             </p>
                             {detail.second && (
-                              <p className="flex items-center gap-1.5 text-emerald-300">
-                                <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-emerald-400" />
+                              <p className="flex items-center gap-1.5 text-emerald-800 dark:text-emerald-300">
+                                <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-emerald-500" />
                                 <span>{detail.second}</span>
                               </p>
                             )}
                             {detail.third && (
-                              <p className="flex items-center gap-1.5 text-purple-300">
-                                <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-purple-400" />
+                              <p className="flex items-center gap-1.5 text-purple-800 dark:text-purple-300">
+                                <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-purple-500" />
                                 <span>{detail.third}</span>
                               </p>
                             )}
@@ -330,8 +330,8 @@ export function PrepositionGuide() {
                       ))}
                     </div>
 
-                    <div className="pt-2 border-t border-slate-800">
-                      <p className="text-xs font-medium text-amber-300/90 italic">
+                    <div className="pt-2 border-t border-slate-200 dark:border-slate-800">
+                      <p className="text-xs font-semibold text-amber-800 dark:text-amber-300/90 italic">
                         {nuance.tip}
                       </p>
                     </div>
@@ -350,7 +350,7 @@ export function PrepositionGuide() {
                     onClick={() => setSelectedPreposition(item)}
                     className={`glass-panel p-6 space-y-4 hover:border-indigo-500/50 transition-all duration-300 group hover:-translate-y-1 cursor-pointer flex flex-col justify-between break-inside-avoid w-full mb-6 ${
                       isActive 
-                        ? 'border-indigo-500 bg-indigo-950/20 ring-2 ring-indigo-500/30' 
+                        ? 'border-indigo-500 bg-indigo-500/10 dark:bg-indigo-950/20 ring-2 ring-indigo-500/30' 
                         : ''
                     }`}
                   >
@@ -358,11 +358,11 @@ export function PrepositionGuide() {
                       {/* Header Row */}
                       <div className="flex items-start justify-between gap-2">
                         <div className="flex items-center gap-3">
-                          <span className="text-3xl p-2 bg-slate-900 rounded-xl border border-slate-800 group-hover:scale-110 transition-transform">
+                          <span className="text-3xl p-2 bg-white/90 dark:bg-slate-900 rounded-xl border border-pink-500/20 dark:border-slate-800 group-hover:scale-110 transition-transform shadow-sm">
                             {item.visualIcon}
                           </span>
                           <div>
-                            <h3 className="text-xl font-extrabold text-white font-brand group-hover:text-indigo-400 transition-colors flex items-center gap-2">
+                            <h3 className="text-xl font-extrabold text-slate-900 dark:text-white font-brand group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors flex items-center gap-2">
                               <span>{item.word}</span>
                             </h3>
                             <span className={`text-[11px] font-semibold px-2.5 py-0.5 rounded-full border inline-block mt-1 ${getCategoryBadgeClass(item.category)}`}>
@@ -376,7 +376,7 @@ export function PrepositionGuide() {
                             e.stopPropagation();
                             handleSpeak(item.word);
                           }}
-                          className="p-2 rounded-lg bg-slate-800/80 text-slate-400 hover:text-sky-300 hover:bg-slate-700 transition-all shrink-0"
+                          className="p-2 rounded-lg bg-pink-100 dark:bg-slate-800/80 text-pink-700 dark:text-slate-400 hover:text-pink-900 dark:hover:text-sky-300 transition-all shrink-0 shadow-sm"
                           title="발음 듣기"
                         >
                           <Volume2 className="w-4 h-4" />
@@ -384,45 +384,45 @@ export function PrepositionGuide() {
                       </div>
 
                       {/* Arrow Meaning Badge */}
-                      <div className="inline-block px-3 py-1.5 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-bold w-full">
+                      <div className="inline-block px-3 py-1.5 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-900 dark:text-indigo-300 text-xs font-extrabold w-full">
                         🎯 시각 이미지: {item.arrowMeaning}
                       </div>
 
                       {/* Core Concept */}
-                      <p className="text-xs text-slate-300 leading-relaxed bg-slate-950/60 p-3 rounded-xl border border-slate-800/80">
+                      <p className="text-xs text-slate-800 dark:text-slate-300 leading-relaxed bg-white/90 dark:bg-slate-950/60 p-3 rounded-xl border border-pink-500/20 dark:border-slate-800/80 shadow-sm font-medium">
                         {item.coreConcept}
                       </p>
                     </div>
 
                     {/* Example Snippet */}
-                    <div className="pt-3 border-t border-slate-800/80 space-y-2">
-                      <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
+                    <div className="pt-3 border-t border-slate-200 dark:border-slate-800/80 space-y-2">
+                      <span className="text-[11px] font-bold text-slate-600 dark:text-slate-400 uppercase tracking-wider block">
                         대표 예시
                       </span>
                       {item.examples && item.examples.length > 0 ? (
-                        <div className="bg-slate-900/90 p-2.5 rounded-lg border border-slate-800 text-xs space-y-1">
-                          <p className="font-semibold text-sky-300 flex items-center justify-between">
+                        <div className="bg-white/90 dark:bg-slate-900/90 p-2.5 rounded-lg border border-pink-500/20 dark:border-slate-800 text-xs space-y-1 shadow-sm">
+                          <p className="font-bold text-sky-800 dark:text-sky-300 flex items-center justify-between">
                             <span>"{item.examples[0].en}"</span>
-                            <ArrowUpRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-sky-400 transition-colors" />
+                            <ArrowUpRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-sky-500 transition-colors" />
                           </p>
-                          <p className="text-[11px] text-slate-400">
+                          <p className="text-[11px] text-slate-600 dark:text-slate-400 font-medium">
                             → {item.examples[0].kr}
                           </p>
                         </div>
                       ) : (
-                        <p className="text-xs text-slate-400">"{item.example}"</p>
+                        <p className="text-xs text-slate-600 dark:text-slate-400 font-medium">"{item.example}"</p>
                       )}
 
                       {/* Phrasal Verbs Preview */}
                       {item.phrasalVerbs && item.phrasalVerbs.length > 0 && (
                         <div className="flex flex-wrap gap-1 pt-1">
                           {item.phrasalVerbs.slice(0, 2).map((pv, idx) => (
-                            <span key={idx} className="text-[10px] bg-slate-800 text-slate-300 px-2 py-0.5 rounded-md border border-slate-700">
+                            <span key={idx} className="text-[10px] bg-pink-100 dark:bg-slate-800 text-pink-900 dark:text-slate-300 px-2 py-0.5 rounded-md border border-pink-300 dark:border-slate-700 font-bold">
                               {pv}
                             </span>
                           ))}
                           {item.phrasalVerbs.length > 2 && (
-                            <span className="text-[10px] text-slate-500 px-1 py-0.5">
+                            <span className="text-[10px] text-slate-500 px-1 py-0.5 font-bold">
                               +{item.phrasalVerbs.length - 2} 더보기
                             </span>
                           )}
@@ -430,7 +430,7 @@ export function PrepositionGuide() {
                       )}
 
                       {/* Dictionary Quick-Link Buttons (Card Grid) */}
-                      <div className="flex flex-wrap gap-1 pt-2 border-t border-slate-800/60 mt-1">
+                      <div className="flex flex-wrap gap-1 pt-2 border-t border-slate-200 dark:border-slate-800/60 mt-1">
                         <span className="text-[10px] text-slate-500 font-bold w-full uppercase tracking-wider mb-0.5">📖 더 많은 예문 보기</span>
                         {getDictionaryLinks(item.word).map((dict) => (
                           <a
@@ -459,25 +459,25 @@ export function PrepositionGuide() {
         {/* Right Side: Sticky Detail Side Panel */}
         {selectedPreposition && (
           <div 
-            className="w-full lg:w-[40%] xl:w-[35%] lg:sticky lg:top-40 bg-slate-900 border border-indigo-500/30 rounded-2xl p-5 space-y-4 shadow-2xl max-h-[calc(100vh-190px)] overflow-y-auto scrollbar-thin shrink-0 animate-fade-in"
+            className="w-full lg:w-[40%] xl:w-[35%] lg:sticky lg:top-40 bg-white/95 dark:bg-slate-900 border border-indigo-500/30 rounded-2xl p-5 space-y-4 shadow-2xl max-h-[calc(100vh-190px)] overflow-y-auto scrollbar-thin shrink-0 animate-fade-in text-slate-800 dark:text-slate-200"
             style={{
               animation: 'slideInRight 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards'
             }}
           >
             {/* Header / Close Button */}
-            <div className="flex items-center justify-between gap-2 border-b border-slate-800 pb-3">
+            <div className="flex items-center justify-between gap-2 border-b border-pink-500/20 dark:border-slate-800 pb-3">
               <div className="flex items-center gap-3">
-                <span className="text-3xl p-2 bg-slate-950 rounded-2xl border border-slate-800">
+                <span className="text-3xl p-2 bg-pink-100 dark:bg-slate-950 rounded-2xl border border-pink-300 dark:border-slate-800 shadow-sm">
                   {selectedPreposition.visualIcon}
                 </span>
                 <div>
                   <div className="flex items-center gap-2">
-                    <h3 className="text-2xl font-extrabold text-white font-brand">
+                    <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white font-brand">
                       {selectedPreposition.word}
                     </h3>
                     <button
                       onClick={() => handleSpeak(selectedPreposition.word)}
-                      className={`p-1.5 rounded-lg transition-all ${speaking && speakingText === selectedPreposition.word ? 'bg-indigo-600/40 text-indigo-300' : 'bg-indigo-600/20 text-indigo-300 hover:bg-indigo-600/40'}`}
+                      className={`p-1.5 rounded-lg transition-all ${speaking && speakingText === selectedPreposition.word ? 'bg-indigo-600/40 text-indigo-900 dark:text-indigo-300' : 'bg-indigo-500/20 text-indigo-700 dark:text-indigo-300 hover:bg-indigo-500/30'}`}
                       title={speaking && speakingText === selectedPreposition.word ? '발음 중단하기' : '원어민 발음 듣기'}
                     >
                       <Volume2 className={`w-3.5 h-3.5 ${speaking && speakingText === selectedPreposition.word ? 'animate-bounce' : ''}`} />
@@ -491,58 +491,58 @@ export function PrepositionGuide() {
               
               <button
                 onClick={() => setSelectedPreposition(null)}
-                className="p-2 rounded-xl bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition-all shrink-0"
+                className="p-2 rounded-xl bg-pink-100 dark:bg-slate-800 text-pink-700 dark:text-slate-400 hover:text-pink-900 dark:hover:text-white hover:bg-pink-200 dark:hover:bg-slate-700 transition-all shrink-0"
                 title="상세보기 닫기"
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
 
-            {/* Arrow English Visual Concept */}
-            <div className="bg-gradient-to-r from-indigo-900/40 to-sky-900/40 p-3.5 rounded-xl border border-indigo-500/30 space-y-1.5">
-              <span className="text-[10px] font-extrabold text-indigo-300 uppercase tracking-wider flex items-center gap-1.5">
-                <Compass className="w-3.5 h-3.5 text-indigo-400" />
-                <span>애로우 잉글리시 시각적 핵심 이미지</span>
+            {/* Cupid English Visual Concept */}
+            <div className="bg-gradient-to-r from-indigo-100/90 to-sky-100/90 dark:from-indigo-900/40 dark:to-sky-900/40 p-3.5 rounded-xl border border-indigo-300 dark:border-indigo-500/30 space-y-1.5 shadow-sm">
+              <span className="text-[10px] font-extrabold text-indigo-800 dark:text-indigo-300 uppercase tracking-wider flex items-center gap-1.5">
+                <Compass className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400" />
+                <span>큐피드 잉글리시 시각적 핵심 이미지</span>
               </span>
-              <p className="text-base font-bold text-white">
+              <p className="text-base font-extrabold text-slate-900 dark:text-white">
                 "{selectedPreposition.arrowMeaning}"
               </p>
-              <p className="text-xs text-slate-300 leading-relaxed">
+              <p className="text-xs text-slate-800 dark:text-slate-300 leading-relaxed font-medium">
                 {selectedPreposition.coreConcept}
               </p>
             </div>
 
             {/* Examples Breakdown */}
             <div className="space-y-2.5">
-              <h4 className="text-xs font-extrabold text-slate-200 flex items-center gap-1.5">
-                <BookOpen className="w-3.5 h-3.5 text-sky-400" />
+              <h4 className="text-xs font-extrabold text-slate-800 dark:text-slate-200 flex items-center gap-1.5">
+                <BookOpen className="w-3.5 h-3.5 text-sky-600 dark:text-sky-400" />
                 <span>실전 문장과 애로우 순차 해설</span>
               </h4>
 
               <div className="space-y-2">
                 {selectedPreposition.examples ? (
                   selectedPreposition.examples.map((ex, idx) => (
-                    <div key={idx} className="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800 space-y-1.5">
+                    <div key={idx} className="bg-white/90 dark:bg-slate-900/90 p-3.5 rounded-xl border border-pink-500/20 dark:border-slate-800 space-y-1.5 shadow-sm">
                       <div className="flex items-center justify-between">
-                        <p className="text-sm font-bold text-sky-300 font-brand">
+                        <p className="text-sm font-bold text-sky-800 dark:text-sky-300 font-brand">
                           {ex.en}
                         </p>
                         <button
                           onClick={() => handleSpeak(ex.en)}
-                          className={`p-1 transition-all ${speaking && speakingText === ex.en ? 'text-indigo-400 bg-indigo-600/20 rounded-md' : 'text-slate-400 hover:text-sky-300'}`}
+                          className={`p-1 transition-all ${speaking && speakingText === ex.en ? 'text-indigo-600 bg-indigo-500/20 rounded-md' : 'text-slate-400 hover:text-sky-600'}`}
                           title={speaking && speakingText === ex.en ? `중단 (${currentRepIndex}/${totalReps})` : '발음 듣기'}
                         >
                           <Volume2 className={`w-3.5 h-3.5 ${speaking && speakingText === ex.en ? 'animate-bounce' : ''}`} />
                         </button>
                       </div>
-                      <p className="text-xs text-amber-300 font-medium leading-relaxed">
+                      <p className="text-xs text-amber-800 dark:text-amber-300 font-medium leading-relaxed">
                         → {ex.kr}
                       </p>
                     </div>
                   ))
                 ) : (
-                  <div className="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800">
-                    <p className="text-sm font-bold text-sky-300 font-brand">
+                  <div className="bg-white/90 dark:bg-slate-900/90 p-3.5 rounded-xl border border-pink-500/20 dark:border-slate-800 shadow-sm">
+                    <p className="text-sm font-bold text-sky-800 dark:text-sky-300 font-brand">
                       {selectedPreposition.example}
                     </p>
                   </div>
@@ -553,15 +553,15 @@ export function PrepositionGuide() {
             {/* High Frequency Phrasal Verbs / Idioms */}
             {selectedPreposition.phrasalVerbs && selectedPreposition.phrasalVerbs.length > 0 && (
               <div className="space-y-2 pt-1">
-                <h4 className="text-xs font-extrabold text-slate-200 flex items-center gap-1.5">
-                  <Layers className="w-3.5 h-3.5 text-emerald-400" />
+                <h4 className="text-xs font-extrabold text-slate-800 dark:text-slate-200 flex items-center gap-1.5">
+                  <Layers className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                   <span>빈출 구동사 및 필수 숙어 팁</span>
                 </h4>
                 <div className="flex flex-wrap gap-1.5">
                   {selectedPreposition.phrasalVerbs.map((pv, pIdx) => (
                     <span
                       key={pIdx}
-                      className="px-2.5 py-1 rounded-xl bg-slate-900 border border-slate-700/80 text-slate-200 text-xs font-semibold"
+                      className="px-2.5 py-1 rounded-xl bg-pink-100 dark:bg-slate-900 border border-pink-300 dark:border-slate-700/80 text-pink-900 dark:text-slate-200 text-xs font-bold shadow-sm"
                     >
                       🔥 {pv}
                     </span>

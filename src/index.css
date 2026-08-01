@@ -1,38 +1,92 @@
-/* src/index.css - Design System & Modern UI */
+/* src/index.css - Cupid English Pastel Design System 💘 */
 
 :root {
-  --bg-primary: #0f172a;
-  --bg-card: rgba(30, 41, 59, 0.7);
-  --bg-card-hover: rgba(51, 65, 85, 0.8);
-  --border-color: rgba(255, 255, 255, 0.1);
-  --text-main: #f8fafc;
-  --text-muted: #94a3b8;
+  /* Default: Bright, Fresh & Vibrant Light Pastel Tone Paradise */
+  --bg-primary: #fff0f5;
+  --bg-card: rgba(255, 255, 255, 0.90);
+  --bg-card-hover: rgba(255, 237, 245, 0.96);
+  --border-color: rgba(244, 114, 182, 0.35);
+  --text-main: #331832;
+  --text-muted: #86198f;
   --text-dim: #64748b;
-  --accent-indigo: #6366f1;
-  --accent-cyan: #06b6d4;
-  --accent-emerald: #10b981;
-  --accent-amber: #f59e0b;
+  --accent-pink: #ec4899;
   --accent-rose: #f43f5e;
-  --accent-purple: #a855f7;
-  --shadow-glow: 0 0 25px rgba(99, 102, 241, 0.25);
-  --glass-bg: rgba(15, 23, 42, 0.75);
-  --radius-lg: 16px;
-  --radius-md: 12px;
-  --radius-sm: 8px;
+  --accent-lavender: #a855f7;
+  --accent-violet: #d946ef;
+  --accent-peach: #f97316;
+  --accent-mint: #10b981;
+  --accent-sky: #0284c7;
+  --shadow-glow: 0 10px 30px rgba(236, 72, 153, 0.22);
+  --glass-bg: rgba(255, 255, 255, 0.88);
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 12px;
   --font-sans: 'Noto Sans KR', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-brand: 'Outfit', 'Noto Sans KR', sans-serif;
 }
 
 [data-theme="light"] {
-  --bg-primary: #f8fafc;
-  --bg-card: rgba(255, 255, 255, 0.85);
-  --bg-card-hover: rgba(241, 245, 249, 0.9);
-  --border-color: rgba(0, 0, 0, 0.08);
-  --text-main: #0f172a;
-  --text-muted: #475569;
-  --text-dim: #94a3b8;
-  --shadow-glow: 0 10px 30px rgba(99, 102, 241, 0.12);
-  --glass-bg: rgba(255, 255, 255, 0.85);
+  --bg-primary: #fff2f7;
+  --bg-card: rgba(255, 255, 255, 0.92);
+  --bg-card-hover: rgba(255, 238, 246, 0.98);
+  --border-color: rgba(244, 114, 182, 0.35);
+  --text-main: #2b0938;
+  --text-muted: #9d174d;
+  --text-dim: #475569;
+  --shadow-glow: 0 12px 32px rgba(236, 72, 153, 0.2);
+  --glass-bg: rgba(255, 255, 255, 0.90);
+}
+
+[data-theme="dark"] {
+  /* Dark Mode: Romantic Velvet Dark & Pastel Neon Glow */
+  --bg-primary: #180e1e;
+  --bg-card: rgba(43, 22, 59, 0.78);
+  --bg-card-hover: rgba(66, 32, 91, 0.88);
+  --border-color: rgba(244, 114, 182, 0.30);
+  --text-main: #fff0f5;
+  --text-muted: #f472b6;
+  --text-dim: #cbd5e1;
+  --shadow-glow: 0 0 25px rgba(244, 114, 182, 0.35);
+  --glass-bg: rgba(24, 14, 30, 0.82);
+}
+
+/* Select & Combobox High Contrast Styling */
+select {
+  color: #831843 !important;
+  background-color: #ffffff !important;
+  border: 1.5px solid #f472b6 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 2px 6px rgba(244, 114, 182, 0.15);
+}
+
+[data-theme="dark"] select,
+.dark select {
+  color: #ffffff !important;
+  background-color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+select option {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  font-weight: 800 !important;
+  padding: 8px;
+}
+
+[data-theme="dark"] select option,
+.dark select option {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+}
+
+/* Input & Textarea contrast */
+input, textarea {
+  color: var(--text-main);
+}
+
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+  color: #475569;
 }
 
 * {
@@ -48,25 +102,37 @@ body {
   min-height: 100vh;
   line-height: 1.6;
   overflow-x: hidden;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.35s ease, color 0.35s ease;
   background-image: 
-    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.12) 0px, transparent 50%);
+    radial-gradient(at 10% 10%, rgba(252, 231, 243, 0.95) 0px, transparent 50%),
+    radial-gradient(at 90% 20%, rgba(243, 232, 255, 0.95) 0px, transparent 50%),
+    radial-gradient(at 50% 80%, rgba(224, 242, 254, 0.85) 0px, transparent 60%),
+    radial-gradient(at 80% 90%, rgba(254, 243, 199, 0.70) 0px, transparent 50%),
+    radial-gradient(at 20% 70%, rgba(220, 252, 231, 0.75) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+[data-theme="dark"] body {
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(244, 114, 182, 0.22) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(192, 132, 252, 0.22) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(251, 113, 133, 0.12) 0px, transparent 60%);
 }
 
 /* Glassmorphism utility */
 .glass-panel {
   background: var(--bg-card);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border-color);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1.5px solid var(--border-color);
   border-radius: var(--radius-lg);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 35px 0 rgba(236, 72, 153, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
 }
 
-/* Gradient Text */
+/* Gradient Text for Cupid English */
 .gradient-text {
-  background: linear-gradient(135deg, #818cf8 0%, #38bdf8 50%, #34d399 100%);
+  background: linear-gradient(135deg, #ec4899 0%, #d946ef 40%, #8b5cf6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: var(--font-brand);
@@ -74,65 +140,83 @@ body {
 
 /* Button styles */
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-indigo), #4f46e5);
+  background: linear-gradient(135deg, #ec4899, #a855f7);
   color: #ffffff;
   border: none;
   padding: 12px 24px;
   border-radius: var(--radius-md);
-  font-weight: 600;
+  font-weight: 800;
   font-size: 0.95rem;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 20px rgba(236, 72, 153, 0.35);
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
-  background: linear-gradient(135deg, #6366f1, #4338ca);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 28px rgba(236, 72, 153, 0.5);
+  background: linear-gradient(135deg, #db2777, #9333ea);
 }
 
 .btn-primary:active {
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--text-main);
-  border: 1px solid var(--border-color);
+  background: #fce7f3;
+  color: #831843;
+  border: 1.5px solid #f472b6;
   padding: 10px 18px;
   border-radius: var(--radius-md);
-  font-weight: 500;
+  font-weight: 800;
   font-size: 0.9rem;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 6px;
   transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(244, 114, 182, 0.18);
 }
 
 .btn-secondary:hover {
-  background: var(--bg-card-hover);
-  border-color: rgba(99, 102, 241, 0.4);
+  background: #f472b6;
+  color: #ffffff;
+  border-color: #ec4899;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(236, 72, 153, 0.35);
 }
 
-/* Arrow Flow Animation */
-@keyframes arrowPulse {
-  0% { transform: translateX(0); opacity: 0.7; }
-  50% { transform: translateX(4px); opacity: 1; }
-  100% { transform: translateX(0); opacity: 0.7; }
+[data-theme="dark"] .btn-secondary,
+.dark .btn-secondary {
+  background: rgba(244, 114, 182, 0.2);
+  color: #ffffff;
+  border-color: rgba(244, 114, 182, 0.5);
 }
 
-.arrow-pulse {
-  animation: arrowPulse 1.5s infinite ease-in-out;
+[data-theme="dark"] .btn-secondary:hover,
+.dark .btn-secondary:hover {
+  background: #ec4899;
+  color: #ffffff;
+  border-color: #f472b6;
+}
+
+/* Cupid Heart Animation */
+@keyframes heartPulse {
+  0% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.12); opacity: 1; filter: drop-shadow(0 0 8px rgba(236,72,153,0.6)); }
+  100% { transform: scale(1); opacity: 0.9; }
+}
+
+.heart-pulse {
+  animation: heartPulse 1.8s infinite ease-in-out;
 }
 
 /* Fade in scale animation */
 @keyframes fadeInScale {
-  from { opacity: 0; transform: scale(0.96) translateY(10px); }
+  from { opacity: 0; transform: scale(0.97) translateY(8px); }
   to { opacity: 1; transform: scale(1) translateY(0); }
 }
 
@@ -142,64 +226,91 @@ body {
 
 /* Preset Pill Buttons */
 .preset-pill {
-  background: rgba(99, 102, 241, 0.08);
-  border: 1px solid rgba(99, 102, 241, 0.2);
-  color: var(--text-main);
-  padding: 8px 14px;
+  background: #ffffff;
+  border: 1.5px solid #f472b6;
+  color: #831843;
+  padding: 8px 18px;
   border-radius: 9999px;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
+  font-weight: 800;
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(236, 72, 153, 0.12);
+}
+
+[data-theme="dark"] .preset-pill,
+.dark .preset-pill {
+  background: rgba(244, 114, 182, 0.15);
+  border-color: rgba(244, 114, 182, 0.4);
+  color: #ffffff;
 }
 
 .preset-pill:hover {
-  background: rgba(99, 102, 241, 0.2);
-  border-color: var(--accent-indigo);
-  transform: translateY(-1px);
+  background: #f472b6;
+  color: #ffffff;
+  border-color: #ec4899;
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 14px rgba(236, 72, 153, 0.35);
 }
 
 .preset-pill.active {
-  background: var(--accent-indigo);
-  color: white;
-  border-color: var(--accent-indigo);
-  box-shadow: 0 0 12px rgba(99, 102, 241, 0.5);
+  background: linear-gradient(135deg, #ec4899, #a855f7);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 18px rgba(236, 72, 153, 0.45);
 }
 
-/* Chunk Role Colors */
+/* Chunk Role Colors - Cute Vibrant Pastel Palette */
 .chunk-badge {
-  padding: 6px 12px;
+  padding: 7px 16px;
   border-radius: var(--radius-sm);
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.92rem;
+  font-weight: 700;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
-.chunk-indigo { background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); }
-.chunk-blue { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); }
-.chunk-emerald { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
-.chunk-amber { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
-.chunk-rose { background: rgba(244, 63, 94, 0.15); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.3); }
-.chunk-purple { background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); }
-.chunk-slate { background: rgba(148, 163, 184, 0.15); color: #cbd5e1; border: 1px solid rgba(148, 163, 184, 0.3); }
+.chunk-pink { background: rgba(244, 114, 182, 0.22); color: #be185d; border: 1px solid rgba(244, 114, 182, 0.45); }
+.chunk-rose { background: rgba(251, 113, 133, 0.22); color: #be123c; border: 1px solid rgba(251, 113, 133, 0.45); }
+.chunk-purple { background: rgba(192, 132, 252, 0.22); color: #6b21a8; border: 1px solid rgba(192, 132, 252, 0.45); }
+.chunk-violet { background: rgba(232, 121, 249, 0.22); color: #86198f; border: 1px solid rgba(232, 121, 249, 0.45); }
+.chunk-peach { background: rgba(253, 186, 116, 0.25); color: #c2410c; border: 1px solid rgba(253, 186, 116, 0.50); }
+.chunk-mint { background: rgba(110, 231, 183, 0.25); color: #047857; border: 1px solid rgba(110, 231, 183, 0.50); }
+.chunk-sky { background: rgba(125, 211, 252, 0.25); color: #0369a1; border: 1px solid rgba(125, 211, 252, 0.50); }
+.chunk-slate { background: rgba(203, 213, 225, 0.30); color: #334155; border: 1px solid rgba(203, 213, 225, 0.50); }
 
-/* Scrollbar customization */
+[data-theme="dark"] .chunk-pink { color: #f472b6; }
+[data-theme="dark"] .chunk-rose { color: #fb7185; }
+[data-theme="dark"] .chunk-purple { color: #c084fc; }
+[data-theme="dark"] .chunk-violet { color: #e879f9; }
+[data-theme="dark"] .chunk-peach { color: #fdba74; }
+[data-theme="dark"] .chunk-mint { color: #6ee7b7; }
+[data-theme="dark"] .chunk-sky { color: #7dd3fc; }
+[data-theme="dark"] .chunk-slate { color: #cbd5e1; }
+
+/* Scrollbar customization - Soft Pink Tint */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(15, 23, 42, 0.5);
+  background: rgba(255, 240, 245, 0.6);
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+  background: rgba(24, 14, 30, 0.5);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(148, 163, 184, 0.3);
-  border-radius: 4px;
+  background: rgba(244, 114, 182, 0.45);
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(148, 163, 184, 0.5);
+  background: rgba(236, 72, 153, 0.75);
 }
+

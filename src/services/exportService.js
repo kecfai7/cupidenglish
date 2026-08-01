@@ -32,7 +32,7 @@ import { getEducationalGoogleImageSearchUrl } from './imageSearchService';
 /**
  * Helper: Sanitizes English/Korean titles to generate clean, cross-platform filenames
  */
-export function generateSafeFilename(result, prefix = 'ArrowEnglish', extension = '') {
+export function generateSafeFilename(result, prefix = 'CupidEnglish', extension = '') {
   if (!result) return `${prefix}_Report${extension}`;
   
   const baseTitle = result.english || result.arrowKorean || 'Result';
@@ -63,11 +63,11 @@ export function downloadMarkdown(result) {
   });
 
   // UTF-8 BOM for Windows / MS Word encoding compatibility
-  let mdContent = `\uFEFF# 🏹 Arrow English 어순 변환 & 시각화 분석 리포트\n\n`;
+  let mdContent = `\uFEFF# 💘 Cupid English 어순 변환 & 시각화 분석 리포트\n\n`;
   mdContent += `* **분석 일시**: ${dateStr}\n`;
   mdContent += `* **학습자 입력 어순**: \`${result.arrowKorean}\`\n`;
   mdContent += `* **완성 표준 영문**: \`${result.english}\`\n\n`;
-  mdContent += `> **🎯 원어민 뇌속 화살표 카메라 뻗어나가기 순서 (6단계)**:\n`;
+  mdContent += `> **💘 원어민 뇌속 큐피드 카메라 뻗어나가기 순서 (6단계)**:\n`;
   mdContent += `> \`1. 주인공(주어)\` ➔ \`2. 동작\` ➔ \`3. 가까운 대상\` ➔ \`4. 전치사\` ➔ \`5. 장소\` ➔ \`6. 시간\`\n\n`;
   mdContent += `----\n\n`;
 
@@ -97,8 +97,8 @@ export function downloadMarkdown(result) {
   });
   mdContent += `\n----\n\n`;
 
-  // 3. 6단계 화살표 어순 매핑 표
-  mdContent += `## 3. 🎯 6단계 화살표 어순 매핑 (Arrow Flow Sequence)\n\n`;
+  // 3. 6단계 큐피드 어순 매핑 표
+  mdContent += `## 3. 💘 6단계 큐피드 어순 매핑 (Cupid Flow Sequence)\n\n`;
   mdContent += `| 단계 | 역할 | 한글 표기 | 영문 표현 |\n`;
   mdContent += `| :---: | :--- | :--- | :--- |\n`;
 
@@ -109,8 +109,8 @@ export function downloadMarkdown(result) {
   }
   mdContent += `\n----\n\n`;
 
-  // 4. 애로우 잉글리시 시선 이동 원리 해설
-  mdContent += `## 4. 🧠 애로우 잉글리시 시선 이동 원리 해설\n\n`;
+  // 4. 큐피드 잉글리시 시선 이동 원리 해설
+  mdContent += `## 4. 🧠 큐피드 잉글리시 시선 이동 원리 해설\n\n`;
   if (result.explanation && result.explanation.length > 0) {
     result.explanation.forEach((step) => {
       const cleanStep = step.replace(/<[^>]*>?/gm, '').replace(/\*\*(.*?)\*\*/g, '**$1**');
@@ -160,13 +160,13 @@ export function downloadMarkdown(result) {
     mdContent += `----\n\n`;
   }
 
-  mdContent += `*© 2026 Arrow English AI Studio - Markdown Export Document*\n`;
+  mdContent += `*© 2026 Cupid English AI Studio - Markdown Export Document*\n`;
 
   // Trigger file download in browser
   const blob = new Blob([mdContent], { type: 'text/markdown;charset=utf-8;' });
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
-  const filename = generateSafeFilename(result, 'ArrowEnglish', '.md');
+  const filename = generateSafeFilename(result, 'CupidEnglish', '.md');
 
   link.href = url;
   link.setAttribute('download', filename);
@@ -193,7 +193,7 @@ export function exportToPDF(result) {
     minute: '2-digit'
   });
 
-  const docTitle = generateSafeFilename(result, 'ArrowEnglish', '');
+  const docTitle = generateSafeFilename(result, 'CupidEnglish', '');
 
   const vocabList = result.vocabCards || result.chunks.map(c => ({
     korean: c.text,
@@ -403,19 +403,19 @@ export function exportToPDF(result) {
         </button>
       </div>
 
-      <div style="border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center;">
+      <div style="border-bottom: 2px solid #fbcfe8; padding-bottom: 12px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center;">
         <div>
-          <div style="font-size: 22px; font-weight: 800; color: #4f46e5; letter-spacing: -0.5px;">🏹 Arrow English AI Studio</div>
-          <div style="font-size: 12px; color: #64748b; margin-top: 2px;">뇌 구조에 맞춘 직관 영어 어순 분석 & 이미지 단어 학습 리포트</div>
+          <div style="font-size: 22px; font-weight: 800; color: #ec4899; letter-spacing: -0.5px;">💘 Cupid English AI Studio</div>
+          <div style="font-size: 12px; color: #86198f; margin-top: 2px;">뇌 구조에 맞춘 직관 파스텔 큐피드 어순 분석 & 이미지 단어 학습 리포트</div>
         </div>
-        <div style="font-size: 11px; color: #64748b; text-align: right;">
+        <div style="font-size: 11px; color: #9d4edd; text-align: right;">
           발급일자: ${dateStr}
         </div>
       </div>
 
       <!-- 6-step Banner -->
-      <div style="background: #e0e7ff; border: 1px solid #c7d2fe; border-radius: 10px; padding: 10px 14px; margin-bottom: 16px; font-size: 11px; color: #3730a3; text-align: center;">
-        <strong>🎯 원어민 뇌속 화살표 순서 (6단계):</strong>
+      <div style="background: #fce7f3; border: 1px solid #fbcfe8; border-radius: 10px; padding: 10px 14px; margin-bottom: 16px; font-size: 11px; color: #9d174d; text-align: center;">
+        <strong>💘 원어민 뇌속 큐피드 순서 (6단계):</strong>
         1. 주인공(주어) ➔ 2. 동작 ➔ 3. 가까운 대상 ➔ 4. 전치사 ➔ 5. 장소 ➔ 6. 시간
       </div>
 
@@ -493,7 +493,7 @@ export function exportToPDF(result) {
       }
 
       <div style="margin-top: 30px; text-align: center; font-size: 11px; color: #94a3b8; border-top: 1px solid #e2e8f0; padding-top: 14px;">
-        © 2026 Arrow English AI Studio. All rights reserved. Printable PDF Document.
+        © 2026 Cupid English AI Studio. All rights reserved. Printable PDF Document.
       </div>
 
       <script>

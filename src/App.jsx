@@ -13,7 +13,7 @@ import { initVaultStorage } from './services/vaultService';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('translator');
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isGuideOpen, setIsGuideOpen] = useState(false);
   const [isEmailModalOpen, setIsEmailModalOpen] = useState(false);
@@ -27,6 +27,11 @@ export default function App() {
     const nextTheme = theme === 'dark' ? 'light' : 'dark';
     setTheme(nextTheme);
     document.documentElement.setAttribute('data-theme', nextTheme);
+    if (nextTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
   };
 
   const handleOpenEmailModal = (targetResult) => {
@@ -35,7 +40,8 @@ export default function App() {
   };
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', 'dark');
+    document.documentElement.setAttribute('data-theme', 'light');
+    document.documentElement.classList.remove('dark');
     initVaultStorage();
 
     if (navigator.storage && navigator.storage.persist) {
@@ -83,7 +89,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="mt-16 text-center text-xs text-slate-500 py-6 border-t border-slate-800/60 flex flex-col items-center gap-2">
-        <p>© 2026 Arrow English AI Studio - 뇌 구조에 맞춘 직관 영어 학습 파트너</p>
+        <p>© 2026 Cupid English AI Studio - 뇌 구조에 맞춘 직관 파스텔 큐피드 영어 학습 파트너 💘</p>
         <button
           onClick={() => setIsGuideOpen(true)}
           className="text-[11px] text-sky-400 hover:underline flex items-center gap-1 font-medium"

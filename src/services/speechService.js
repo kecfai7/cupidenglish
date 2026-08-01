@@ -1,5 +1,5 @@
 const KOREAN_PARENTHESIS_PATTERN = /\([\u3131-\u318E\uAC00-\uD7A3\s]+\)/g;
-const LOCAL_STORAGE_KEY = 'arrow_english_tts_settings';
+const LOCAL_STORAGE_KEY = 'cupid_english_tts_settings';
 
 export function toSpeakableEnglish(text) {
   return (text || '')
@@ -27,7 +27,7 @@ export function saveTtsSettings(settings) {
   if (typeof window === 'undefined') return;
   try {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(settings));
-    window.dispatchEvent(new Event('arrow_tts_settings_changed'));
+    window.dispatchEvent(new Event('cupid_tts_settings_changed'));
   } catch (e) {
     console.error('Failed to save TTS settings:', e);
   }

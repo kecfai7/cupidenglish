@@ -43,17 +43,17 @@ export function ApiSettingsModal({ isOpen, onClose, apiKey, setApiKey }) {
         </button>
 
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center">
+          <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center">
             <Key className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="text-lg font-bold text-white">Gemini AI API 키 설정</h3>
-            <p className="text-xs text-slate-400">자유로운 실시간 AI 어순 변환 및 분석</p>
+            <h3 className="text-lg font-bold text-slate-900 dark:text-white">Gemini AI API 키 설정</h3>
+            <p className="text-xs text-slate-600 dark:text-slate-400 font-medium">자유로운 실시간 AI 어순 변환 및 분석</p>
           </div>
         </div>
 
         <div className="space-y-3">
-          <label className="block text-xs font-semibold text-slate-300">
+          <label className="block text-xs font-bold text-slate-800 dark:text-slate-300">
             Google Gemini API Key
           </label>
           <input
@@ -61,14 +61,14 @@ export function ApiSettingsModal({ isOpen, onClose, apiKey, setApiKey }) {
             value={tempKey}
             onChange={(e) => setTempKey(e.target.value)}
             placeholder="AIzaSy..."
-            className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white text-sm placeholder-slate-600 focus:outline-none focus:border-indigo-500"
+            className="w-full px-4 py-2.5 rounded-xl bg-white/90 dark:bg-slate-900 border border-pink-500/30 dark:border-slate-700 text-slate-900 dark:text-white text-sm placeholder-slate-400 dark:placeholder-slate-600 focus:outline-none focus:border-pink-500 font-medium shadow-inner"
           />
-          <div className="flex flex-col gap-1 text-[11px] text-slate-400">
+          <div className="flex flex-col gap-1 text-[11px] text-slate-600 dark:text-slate-400 font-medium">
             <div className="flex items-center gap-1.5">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-              <span>로컬 로컬 디스크 파일(`_api_key.json`) 이중 백업 보관</span>
+              <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+              <span>로컬 디스크 파일(`_api_key.json`) 이중 백업 보관</span>
             </div>
-            <span className="text-[10px] text-sky-400 font-medium">
+            <span className="text-[10px] text-sky-600 dark:text-sky-400 font-semibold">
               ✨ 브라우저 캐시/방문 기록을 삭제하더라도 API 키가 삭제되지 않고 영구 보존됩니다!
             </span>
           </div>
