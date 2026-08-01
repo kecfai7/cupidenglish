@@ -78,9 +78,6 @@ export function TtsSettingsBar({ className = '' }) {
         </select>
       </div>
 
-      <div className="text-xs text-slate-300 font-bold hidden lg:block">
-        * 브라우저 로컬 디스크에 영구 보관됩니다.
-      </div>
     </div>
   );
 }
