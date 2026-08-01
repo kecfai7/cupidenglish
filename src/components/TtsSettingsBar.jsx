@@ -22,7 +22,7 @@ export function TtsSettingsBar({ className = '' }) {
   };
 
   return (
-    <div className={`flex flex-wrap items-center justify-between gap-4 bg-white dark:bg-slate-900 backdrop-blur-md px-6 py-4 rounded-3xl border border-pink-300 dark:border-slate-800 text-xs text-slate-950 dark:text-slate-100 font-extrabold shadow-xl transition-all ${className}`}>
+    <div className={`flex flex-wrap items-center justify-between gap-4 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl px-6 py-4 rounded-3xl border border-pink-300/80 dark:border-slate-800/80 text-xs text-slate-950 dark:text-slate-100 font-extrabold shadow-lg transition-all ${className}`}>
       {/* Title/Header icon */}
       <div className="flex items-center gap-2 pr-3 border-r border-pink-300 dark:border-slate-800 shrink-0">
         <div className="w-8 h-8 rounded-xl bg-pink-100 dark:bg-pink-500/20 border border-pink-300 dark:border-pink-500/30 flex items-center justify-center text-pink-600 dark:text-pink-400 shrink-0">

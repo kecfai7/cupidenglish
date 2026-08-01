@@ -19,7 +19,7 @@ export function Navbar({ activeTab, setActiveTab, onOpenSettings, onOpenGuide, t
   }, []);
 
   return (
-    <header className="glass-panel sticky top-4 z-40 mx-4 my-4 px-6 py-4 flex flex-wrap items-center justify-between gap-4 border border-pink-500/20 shadow-lg shadow-pink-500/10">
+    <header className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl sticky top-4 z-40 mx-4 my-4 px-6 py-4 flex flex-wrap items-center justify-between gap-4 border border-pink-300/80 dark:border-slate-800/80 shadow-lg rounded-3xl">
       {/* Toast Notification */}
       {toastMessage && (
         <div className="fixed bottom-6 right-6 z-50 bg-pink-500 text-white font-bold px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 animate-bounce border border-pink-300">
@@ -46,13 +46,13 @@ export function Navbar({ activeTab, setActiveTab, onOpenSettings, onOpenGuide, t
       </div>
 
       {/* Navigation Tabs */}
-      <nav className="flex items-center gap-2 bg-pink-100/90 dark:bg-pink-950/40 backdrop-blur-md p-1.5 rounded-2xl border border-pink-300 dark:border-pink-500/30 shadow-inner">
+      <nav className="flex items-center gap-2 bg-pink-100/70 dark:bg-pink-950/40 backdrop-blur-md p-1.5 rounded-2xl border border-pink-300/80 dark:border-pink-500/30 shadow-inner">
         <button
           onClick={() => setActiveTab('translator')}
           className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-extrabold transition-all ${
             activeTab === 'translator'
               ? 'bg-gradient-to-r from-pink-600 to-purple-600 text-white shadow-md shadow-pink-500/40'
-              : 'bg-white/80 dark:bg-slate-900/60 text-slate-900 dark:text-slate-100 hover:text-pink-700 dark:hover:text-pink-300 hover:bg-white dark:hover:bg-slate-800 border border-pink-200 dark:border-slate-700/60 shadow-sm'
+              : 'bg-white/90 dark:bg-slate-900/80 text-slate-950 dark:text-slate-100 hover:text-pink-700 dark:hover:text-pink-300 hover:bg-pink-50 border border-pink-300/70 dark:border-slate-700 shadow-sm'
           }`}
         >
           <Sparkles className={`w-4 h-4 ${activeTab === 'translator' ? 'text-white' : 'text-pink-600 dark:text-pink-400'}`} />
@@ -64,7 +64,7 @@ export function Navbar({ activeTab, setActiveTab, onOpenSettings, onOpenGuide, t
           className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-extrabold transition-all ${
             activeTab === 'practice'
               ? 'bg-gradient-to-r from-pink-600 to-purple-600 text-white shadow-md shadow-pink-500/40'
-              : 'bg-white/80 dark:bg-slate-900/60 text-slate-900 dark:text-slate-100 hover:text-purple-700 dark:hover:text-purple-300 hover:bg-white dark:hover:bg-slate-800 border border-pink-200 dark:border-slate-700/60 shadow-sm'
+              : 'bg-white/90 dark:bg-slate-900/80 text-slate-950 dark:text-slate-100 hover:text-purple-700 dark:hover:text-purple-300 hover:bg-pink-50 border border-pink-300/70 dark:border-slate-700 shadow-sm'
           }`}
         >
           <BookOpen className={`w-4 h-4 ${activeTab === 'practice' ? 'text-white' : 'text-purple-600 dark:text-purple-400'}`} />
@@ -76,7 +76,7 @@ export function Navbar({ activeTab, setActiveTab, onOpenSettings, onOpenGuide, t
           className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-extrabold transition-all ${
             activeTab === 'dictionary'
               ? 'bg-gradient-to-r from-pink-600 to-purple-600 text-white shadow-md shadow-pink-500/40'
-              : 'bg-white/80 dark:bg-slate-900/60 text-slate-900 dark:text-slate-100 hover:text-rose-700 dark:hover:text-rose-300 hover:bg-white dark:hover:bg-slate-800 border border-pink-200 dark:border-slate-700/60 shadow-sm'
+              : 'bg-white/90 dark:bg-slate-900/80 text-slate-950 dark:text-slate-100 hover:text-rose-700 dark:hover:text-rose-300 hover:bg-pink-50 border border-pink-300/70 dark:border-slate-700 shadow-sm'
           }`}
         >
           <HelpCircle className={`w-4 h-4 ${activeTab === 'dictionary' ? 'text-white' : 'text-rose-600 dark:text-rose-400'}`} />
@@ -88,7 +88,7 @@ export function Navbar({ activeTab, setActiveTab, onOpenSettings, onOpenGuide, t
           className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-extrabold transition-all relative ${
             activeTab === 'vault'
               ? 'bg-gradient-to-r from-pink-600 to-purple-600 text-white shadow-md shadow-pink-500/40'
-              : 'bg-white/80 dark:bg-slate-900/60 text-slate-900 dark:text-slate-100 hover:text-pink-700 dark:hover:text-pink-300 hover:bg-white dark:hover:bg-slate-800 border border-pink-200 dark:border-slate-700/60 shadow-sm'
+              : 'bg-white/90 dark:bg-slate-900/80 text-slate-950 dark:text-slate-100 hover:text-pink-700 dark:hover:text-pink-300 hover:bg-pink-50 border border-pink-300/70 dark:border-slate-700 shadow-sm'
           }`}
         >
           <FolderOpen className={`w-4 h-4 ${activeTab === 'vault' ? 'text-white' : 'text-pink-600 dark:text-pink-400'}`} />
@@ -156,10 +156,10 @@ export function Navbar({ activeTab, setActiveTab, onOpenSettings, onOpenGuide, t
 
         {/* Top Line Export Buttons */}
         {currentResult && activeTab === 'translator' && (
-          <div className="flex items-center gap-2 mr-1 bg-white/90 dark:bg-slate-900/90 p-1 rounded-xl border border-pink-300 dark:border-pink-500/20 shadow-inner">
+          <div className="flex items-center gap-2 mr-1 bg-pink-100/70 dark:bg-slate-900/80 p-1 rounded-2xl border border-pink-300/80 dark:border-pink-500/20 shadow-inner">
             <button
               onClick={() => downloadMarkdown(currentResult)}
-              className="px-3 py-1.5 rounded-lg bg-pink-100/90 dark:bg-pink-500/10 border border-pink-300 dark:border-pink-500/30 text-pink-950 dark:text-pink-300 hover:bg-pink-200 text-xs font-extrabold transition-all flex items-center gap-1.5 shadow-sm"
+              className="px-3 py-1.5 rounded-xl bg-white/90 dark:bg-pink-500/20 border border-pink-300 dark:border-pink-500/40 text-pink-950 dark:text-pink-300 hover:bg-pink-50 text-xs font-black transition-all flex items-center gap-1.5 shadow-sm"
               title="디자인 없는 텍스트 마크다운(.md) 저장"
             >
               <FileText className="w-3.5 h-3.5 text-pink-600" />
