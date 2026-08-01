@@ -81,7 +81,30 @@ select option {
 
 /* Input & Textarea contrast */
 input, textarea {
-  color: var(--text-main);
+  color: #0f172a !important;
+  font-weight: 700;
+}
+
+input:focus, textarea:focus {
+  color: #0f172a !important;
+  border-color: #ec4899 !important;
+  outline: none;
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+.dark input,
+.dark textarea {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] input:focus,
+[data-theme="dark"] textarea:focus,
+.dark input:focus,
+.dark textarea:focus {
+  background-color: #020617 !important;
+  color: #ffffff !important;
+  border-color: #ec4899 !important;
 }
 
 [data-theme="light"] input::placeholder,
