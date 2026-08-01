@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { downloadMarkdown, exportToPDF } from '../services/exportService';
 import { Heart, BookOpen, Key, Sparkles, Sun, Moon, HelpCircle, FileText, Printer, FolderOpen, HardDrive, Mail, Cloud } from 'lucide-react';
-import { getVaultItems, subscribeToVaultChanges, getDirectoryStatus } from '../services/vaultService';
+import { getVaultItems, subscribeToVaultChanges, getDirectoryStatus, selectLocalDirectory } from '../services/vaultService';
 
 export function Navbar({ activeTab, setActiveTab, onOpenSettings, onOpenGuide, theme, toggleTheme, currentResult, onOpenEmailModal, onOpenSyncModal }) {
   const [vaultCount, setVaultCount] = useState(() => getVaultItems().length);
@@ -126,12 +126,20 @@ export function Navbar({ activeTab, setActiveTab, onOpenSettings, onOpenGuide, t
           </button>
         ) : dirStatus.needsPermissionGrant ? (
           <button
-            onClick={() => onOpenSyncModal && onOpenSyncModal()}
+            onClick={async () => {
+              try {
+                await selectLocalDirectory({ forceNewPicker: false });
+                setDirStatus(getDirectoryStatus());
+                if (onShowToast) setToastMessage(`⚡ 구글드라이브/폴더 [${getDirectoryStatus().folderName}] 연동이 다시 활성화되었습니다!`);
+              } catch {
+                if (onOpenSyncModal) onOpenSyncModal();
+              }
+            }}
             className="btn-secondary text-xs bg-amber-100/90 dark:bg-amber-500/20 border-amber-400 dark:border-amber-500/40 text-amber-950 dark:text-amber-300 hover:bg-amber-200 flex items-center gap-1.5 shadow-sm animate-pulse font-bold"
-            title={`기존 연동 폴더 [${dirStatus.folderName}] 기억됨 (클릭하여 원클릭 권한 승인)`}
+            title={`기존 연동 폴더 [${dirStatus.folderName}] 기억됨 (클릭하여 1-클릭 권한 승인)`}
           >
-            <Cloud className="w-3.5 h-3.5 text-amber-600" />
-            <span className="hidden sm:inline">⚡ 폴더 [{dirStatus.folderName}] 승인</span>
+            <Cloud className="w-3.5 h-3.5 text-amber-600 animate-bounce" />
+            <span className="hidden sm:inline">⚡ 폴더 [{dirStatus.folderName}] 1-클릭 승인</span>
             <span className="sm:hidden">⚡ [{dirStatus.folderName}] 승인</span>
           </button>
         ) : (
