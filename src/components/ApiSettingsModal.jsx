@@ -34,20 +34,20 @@ export function ApiSettingsModal({ isOpen, onClose, apiKey, setApiKey }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm animate-fade-in">
-      <div className="glass-panel w-full max-w-md p-6 space-y-6 relative border-indigo-500/30">
+      <div className="w-full max-w-md p-6 space-y-6 relative bg-white dark:bg-slate-900 border border-pink-300 dark:border-slate-800 rounded-3xl shadow-2xl">
         <button
           onClick={onClose}
-          className="absolute right-4 top-4 text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 transition-colors"
+          className="absolute right-4 top-4 text-slate-700 dark:text-slate-400 hover:text-slate-950 dark:hover:text-white p-1 rounded-lg hover:bg-pink-100 dark:hover:bg-slate-800 transition-colors font-bold"
         >
           <X className="w-5 h-5" />
         </button>
 
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center">
+          <div className="w-10 h-10 rounded-2xl bg-amber-100 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center border border-amber-300 dark:border-amber-500/30">
             <Key className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="text-lg font-bold text-slate-900 dark:text-white">Gemini AI API 키 설정</h3>
+            <h3 className="text-lg font-black text-slate-950 dark:text-white">Gemini AI API 키 설정</h3>
             <p className="text-xs text-slate-600 dark:text-slate-400 font-medium">자유로운 실시간 AI 어순 변환 및 분석</p>
           </div>
         </div>

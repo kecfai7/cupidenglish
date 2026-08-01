@@ -120,18 +120,18 @@ export function FolderSyncModal({ isOpen, onClose, onShowToast }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-fade-in">
-      <div className="glass-panel w-full max-w-2xl bg-white/95 dark:bg-slate-900/95 border-pink-500/30 dark:border-slate-700/80 shadow-2xl rounded-3xl overflow-hidden flex flex-col max-h-[90vh]">
+      <div className="w-full max-w-2xl bg-white dark:bg-slate-900 border border-pink-300 dark:border-slate-800 shadow-2xl rounded-3xl overflow-hidden flex flex-col max-h-[90vh]">
         {/* Header */}
-        <div className="p-6 border-b border-pink-500/20 dark:border-slate-800 flex items-center justify-between bg-white/90 dark:bg-slate-950/50">
+        <div className="p-6 border-b border-pink-300 dark:border-slate-800 flex items-center justify-between bg-white dark:bg-slate-950">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 flex items-center justify-center border border-indigo-500/30">
+            <div className="w-10 h-10 rounded-2xl bg-indigo-100 dark:bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 flex items-center justify-center border border-indigo-300 dark:border-indigo-500/30">
               <Cloud className="w-5 h-5 text-indigo-600 dark:text-indigo-400 animate-pulse" />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
+              <h3 className="text-lg font-black text-slate-950 dark:text-white flex items-center gap-2">
                 <span>학습자료실 폴더 연동 & 구글 드라이브 동기화</span>
               </h3>
-              <p className="text-xs text-slate-600 dark:text-slate-400 font-medium">
+              <p className="text-xs sm:text-sm text-slate-800 dark:text-slate-200 font-bold">
                 PC를 바꿔도 학습 자료가 사라지지 않도록 구글 드라이브 및 자동 동기화를 설정하세요.
               </p>
             </div>
