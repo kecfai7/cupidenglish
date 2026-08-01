@@ -295,7 +295,7 @@ export function ArrowTranslator({ apiKey, onResultChange, onOpenSettings }) {
       {result && (
         <div className="space-y-8 animate-fade-in">
           {/* 🔊 원어민 발음 설정 바 */}
-          <TtsSettingsBar className="glass-panel border-indigo-500/20" />
+          <TtsSettingsBar />
           {/* Rate Limit / Local Fallback Notice Banner */}
           {result.notice && (
             <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-200 text-xs sm:text-sm font-semibold flex items-center gap-3 animate-pulse">
