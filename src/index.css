@@ -81,14 +81,19 @@ select option {
 
 /* Input & Textarea contrast */
 input, textarea {
-  color: #0f172a !important;
   font-weight: 700;
 }
 
-input:focus, textarea:focus {
-  color: #0f172a !important;
-  border-color: #ec4899 !important;
-  outline: none;
+[data-theme="light"] input,
+[data-theme="light"] textarea {
+  color: #0f172a;
+}
+
+[data-theme="light"] input:focus,
+[data-theme="light"] textarea:focus {
+  color: #0f172a;
+  background-color: #ffffff;
+  border-color: #ec4899;
 }
 
 [data-theme="dark"] input,
@@ -102,14 +107,14 @@ input:focus, textarea:focus {
 [data-theme="dark"] textarea:focus,
 .dark input:focus,
 .dark textarea:focus {
-  background-color: #020617 !important;
   color: #ffffff !important;
+  background-color: #020617 !important;
   border-color: #ec4899 !important;
 }
 
 [data-theme="light"] input::placeholder,
 [data-theme="light"] textarea::placeholder {
-  color: #475569;
+  color: #64748b;
 }
 
 * {
